@@ -93,13 +93,13 @@ class IndexPage extends Component {
     this.setState({ scrollY: window.scrollY });
   };
 
-  componentDidMount() {
-    window.addEventListener("scroll", () => this.updateScroll());
-  }
+  // componentDidMount() {
+  //   window.addEventListener("scroll", () => this.updateScroll());
+  // }
 
-  componentWillUnmount() {
-    window.addEventListener("scroll", () => this.updateScroll());
-  }
+  // componentWillUnmount() {
+  //   window.addEventListener("scroll", () => this.updateScroll());
+  // }
   render() {
     console.log(this.state.scrollY, "scrollY");
     return (
