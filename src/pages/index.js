@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { window, document } from "browser-monads";
-import P5Wrapper from "react-p5-wrapper";
 import SEO from "../components/seo";
 import { BiddefordSeal, SweetcreamLogo } from "../components/svgElements";
 
@@ -41,6 +40,7 @@ class IndexPage extends Component {
   };
 
   componentDidMount() {
+    this.P5Wrapper = require("react-p5-wrapper");
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => this.updateScroll());
       const sketch = p => {
@@ -113,10 +113,11 @@ class IndexPage extends Component {
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <MainWrapper>
           <Canvas>
-            {this.state.sketch && <P5Wrapper sketch={this.state.sketch} />}
+            {this.state.sketch && <this.P5Wrapper sketch={this.state.sketch} />}
           </Canvas>
           <BiddefordSeal />
           <Box top={5 * this.state.scrollY} />
+          <div>uyo</div>
           <SweetcreamLogo />
         </MainWrapper>
       </>
