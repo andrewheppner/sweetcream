@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import P5Wrapper from "react-p5-wrapper";
+// import P5Wrapper from "react-p5-wrapper";
 import SEO from "../components/seo";
 import { BiddefordSeal, SweetcreamLogo } from "../components/svgElements";
 
@@ -87,7 +87,6 @@ const Box = styled.div`
 class IndexPage extends Component {
   state = {
     scrollY: null
-    sketch: null;
   };
 
   updateScroll = () => {
@@ -108,9 +107,7 @@ class IndexPage extends Component {
       <>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <MainWrapper>
-          <Canvas>
-            {/* <P5Wrapper sketch={sketch} /> */}
-          </Canvas>
+          <Canvas>{/* <P5Wrapper sketch={sketch} /> */}</Canvas>
           <BiddefordSeal />
           <Box top={5 * this.state.scrollY} />
           <SweetcreamLogo />
