@@ -4,7 +4,7 @@ import posed from "react-pose";
 import SEO from "../components/seo";
 import { BiddefordSeal, SweetcreamLogo } from "../components/svgElements";
 
-if (typeof window !== "undefined") {
+if (typeof window === "undefined") {
   global.window = {
     performance: {
       now: () => {}
