@@ -5,7 +5,8 @@ import scLogo from "../images/Sweetcream-Logo-PROD.svg";
 import { rotationBuilder } from "../helpers/animations";
 
 const Seal = styled.img`
-  width: 45%;
+  width: 30%;
+  animation: ${rotationBuilder()} 40s linear infinite;
 `;
 
 const Logo = styled.img`

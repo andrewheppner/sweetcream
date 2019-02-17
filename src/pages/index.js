@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { window, document } from "browser-monads";
+import posed from "react-pose";
 import SEO from "../components/seo";
 import { BiddefordSeal, SweetcreamLogo } from "../components/svgElements";
 
@@ -19,15 +19,25 @@ const Canvas = styled.div`
   overflow-y: scroll;
 `;
 
-const Box = styled.div`
-  position: absolute
-  left: 500px;
-  transform: translateY(${props => (props.top < 1000 ? props.top : 1000)}px);
-  width: 200px;
-  height: 200px;
-  background-color: white;
-  // transition: all linear 0s;
+const BannerWrapper = styled.div`
+  width: 100%;
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
+
+const TitleBanner = posed.div({
+  hidden: { opacity: 0, width: "100%" },
+  visible: {
+    opacity: 1,
+    width: "100%",
+    transition: {
+      opacity: { ease: "easeIn", duration: 1000 },
+      default: { ease: "linear", duration: 500 }
+    }
+  }
+});
 
 const sketch = p => {
   let points;
@@ -66,28 +76,21 @@ const sketch = p => {
 
   function drawLine() {
     p.beginShape();
-    let atLeastOneOnScreen = false;
     points.forEach(point => {
       p.vertex(point[0], point[1]);
       point[1] += p.noise(
         point[0] * 1.1 * noiseScaleX,
         p.frameCount * 0.001 * noiseScaleY
       );
-      if (point[1] < p.windowHeight * 1.1) {
-        atLeastOneOnScreen = true;
-      }
     });
     p.endShape();
-    if (!atLeastOneOnScreen) {
-      reset();
-    }
   }
 };
 
 class IndexPage extends Component {
   state = {
     scrollY: null,
-    sketch: null
+    showBanner: false
   };
 
   updateScroll = () => {
@@ -95,9 +98,15 @@ class IndexPage extends Component {
   };
 
   componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        showBanner: !this.state.showBanner
+      });
+    }, 1000);
     this.P5Wrapper = require("react-p5-wrapper");
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => this.updateScroll());
+
       this.setState({ sketch });
     }
   }
@@ -116,9 +125,15 @@ class IndexPage extends Component {
           <Canvas>
             {this.state.sketch && <this.P5Wrapper sketch={this.state.sketch} />}
           </Canvas>
-          {/* <BiddefordSeal />
-          <Box top={5 * this.state.scrollY} />
-          <SweetcreamLogo /> */}
+          <TitleBanner
+            key="Title Banner"
+            pose={this.state.showBanner ? "visible" : "hidden"}
+          >
+            <BannerWrapper>
+              <SweetcreamLogo />
+              <BiddefordSeal />
+            </BannerWrapper>
+          </TitleBanner>
         </MainWrapper>
       </>
     );
