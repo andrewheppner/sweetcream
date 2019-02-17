@@ -28,7 +28,7 @@ const BannerWrapper = styled.div`
 `;
 
 const TitleBanner = posed.div({
-  hidden: { opacity: 0, width: "100%" },
+  hidden: { visibility: "hidden", opacity: 0, width: "100%" },
   visible: {
     opacity: 1,
     width: "100%",
