@@ -33,8 +33,7 @@ const TitleBanner = posed.div({
     opacity: 1,
     width: "100%",
     transition: {
-      opacity: { ease: "easeIn", duration: 1000 },
-      default: { ease: "linear", duration: 500 }
+      opacity: { ease: "easeIn", duration: 1000 }
     }
   }
 });
@@ -127,7 +126,7 @@ class IndexPage extends Component {
           </Canvas>
           <TitleBanner
             key="Title Banner"
-            pose={this.state.showBanner ? "visible" : "hidden"}
+            pose={this.state.showBanner ? "hidden" : "hidden"}
           >
             <BannerWrapper>
               <SweetcreamLogo />
