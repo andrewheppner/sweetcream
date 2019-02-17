@@ -107,7 +107,8 @@ const sketch = p => {
 class IndexPage extends Component {
   state = {
     scrollY: null,
-    showBanner: false
+    showBanner: false,
+    animationReady: false
   };
 
   updateScroll = () => {
@@ -115,9 +116,10 @@ class IndexPage extends Component {
   };
 
   componentDidMount() {
+    this.setState({ animationReady: true });
     setTimeout(() => {
       this.setState({
-        showBanner: !this.state.showBanner
+        showBanner: true
       });
     }, 1000);
     if (typeof window !== "undefined") {
@@ -139,15 +141,17 @@ class IndexPage extends Component {
           <Canvas>
             <P5Wrapper sketch={sketch} />
           </Canvas>
-          <TitleBanner
-            key="Title Banner"
-            pose={this.state.showBanner ? "visible" : "hidden"}
-          >
-            <BannerWrapper>
-              <SweetcreamLogo />
-              <BiddefordSeal />
-            </BannerWrapper>
-          </TitleBanner>
+          {this.state.animationReady && (
+            <TitleBanner
+              key="Title Banner"
+              pose={this.state.showBanner ? "visible" : "hidden"}
+            >
+              <BannerWrapper>
+                <SweetcreamLogo />
+                <BiddefordSeal />
+              </BannerWrapper>
+            </TitleBanner>
+          )}
         </MainWrapper>
       </>
     );
