@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import styled from "styled-components";
+import posed from "react-pose";
+import SEO from "../components/seo";
+import { BiddefordSeal, SweetcreamLogo } from "../components/svgElements";
 
 if (typeof window !== "undefined") {
   global.window = {
@@ -15,11 +19,8 @@ if (typeof window !== "undefined") {
     height: null
   };
 }
-import P5Wrapper from "react-p5-wrapper";
-import styled from "styled-components";
-import posed from "react-pose";
-import SEO from "../components/seo";
-import { BiddefordSeal, SweetcreamLogo } from "../components/svgElements";
+
+const P5Wrapper = require("react-p5-wrapper");
 
 const MainWrapper = styled.div`
   display: flex;
