@@ -122,8 +122,6 @@ class IndexPage extends Component {
     }, 1000);
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => this.updateScroll());
-
-      this.setState({ sketch });
     }
   }
 
