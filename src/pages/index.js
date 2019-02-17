@@ -1,4 +1,21 @@
 import React, { Component } from "react";
+
+if (typeof window !== "undefined") {
+  global.window = {
+    performance: {
+      now: () => {}
+    },
+    addEventListener: () => {}
+  };
+  global.document = {
+    hasFocus: () => {}
+  };
+  global.screen = {
+    width: null,
+    height: null
+  };
+}
+import P5Wrapper from "react-p5-wrapper";
 import styled from "styled-components";
 import posed from "react-pose";
 import SEO from "../components/seo";
@@ -102,7 +119,6 @@ class IndexPage extends Component {
         showBanner: !this.state.showBanner
       });
     }, 1000);
-    this.P5Wrapper = require("react-p5-wrapper");
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () => this.updateScroll());
 
@@ -122,19 +138,17 @@ class IndexPage extends Component {
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <MainWrapper>
           <Canvas>
-            {this.state.sketch && <this.P5Wrapper sketch={this.state.sketch} />}
+            <P5Wrapper sketch={sketch} />
           </Canvas>
-          {this.state.sketch && (
-            <TitleBanner
-              key="Title Banner"
-              pose={this.state.showBanner ? "visible" : "hidden"}
-            >
-              <BannerWrapper>
-                <SweetcreamLogo />
-                <BiddefordSeal />
-              </BannerWrapper>
-            </TitleBanner>
-          )}
+          <TitleBanner
+            key="Title Banner"
+            pose={this.state.showBanner ? "visible" : "hidden"}
+          >
+            <BannerWrapper>
+              <SweetcreamLogo />
+              <BiddefordSeal />
+            </BannerWrapper>
+          </TitleBanner>
         </MainWrapper>
       </>
     );
