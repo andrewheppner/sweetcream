@@ -28,7 +28,7 @@ const BannerWrapper = styled.div`
 `;
 
 const TitleBanner = posed.div({
-  hidden: { visibility: "hidden", opacity: 0, width: "100%" },
+  hidden: { opacity: 0, width: "100%" },
   visible: {
     opacity: 1,
     width: "100%",
@@ -124,15 +124,17 @@ class IndexPage extends Component {
           <Canvas>
             {this.state.sketch && <this.P5Wrapper sketch={this.state.sketch} />}
           </Canvas>
-          <TitleBanner
-            key="Title Banner"
-            pose={this.state.showBanner ? "hidden" : "hidden"}
-          >
-            <BannerWrapper>
-              <SweetcreamLogo />
-              <BiddefordSeal />
-            </BannerWrapper>
-          </TitleBanner>
+          {this.state.sketch && (
+            <TitleBanner
+              key="Title Banner"
+              pose={this.state.showBanner ? "visible" : "hidden"}
+            >
+              <BannerWrapper>
+                <SweetcreamLogo />
+                <BiddefordSeal />
+              </BannerWrapper>
+            </TitleBanner>
+          )}
         </MainWrapper>
       </>
     );
