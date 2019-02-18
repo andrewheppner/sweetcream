@@ -147,6 +147,7 @@ class IndexPage extends Component {
               pose={this.state.showBanner ? "visible" : "hidden"}
             >
               <BannerWrapper>
+                <div>hi</div>
                 <SweetcreamLogo />
                 <BiddefordSeal />
               </BannerWrapper>
