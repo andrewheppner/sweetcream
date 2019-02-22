@@ -1,40 +1,32 @@
 import React, { Component } from "react";
+import ReactPageScroller from "react-page-scroller";
 import styled from "styled-components";
-import posed from "react-pose";
+import { FaInstagram, FaFacebook, FaYelp } from "react-icons/fa";
+// import posed from "react-pose";
 import SEO from "../components/seo";
-import { BiddefordSeal, SweetcreamLogo } from "../components/svgElements";
+import {
+  BiddefordSeal,
+  SweetcreamLogo,
+  Banner
+} from "../components/svgElements";
 
-if (typeof window === "undefined") {
-  global.window = {
-    performance: {
-      now: () => {}
-    },
-    addEventListener: () => {}
-  };
-  global.document = {
-    hasFocus: () => {}
-  };
-  global.screen = {
-    width: null,
-    height: null
-  };
-}
+const YELLOW = "#FEE7A4";
+const GRAY = "#808285";
+const VIOLET = "#A6B0D9";
+const GREEN = "#B8DDB9";
+const PINK = "#F48780";
 
-const P5Wrapper = require("react-p5-wrapper");
-
-const MainWrapper = styled.div`
+const SceneWrapper = styled.div`
   display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-`;
+  height: 100vh;
+  width: 100vw;
+  background: ${props => props.backgroundColor};
 
-const Canvas = styled.div`
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-  overflow-y: scroll;
+  h1 {
+    padding: 30px;
+    font-size: 12rem;
+    color: #f9edd3;
+  }
 `;
 
 const BannerWrapper = styled.div`
@@ -45,114 +37,46 @@ const BannerWrapper = styled.div`
   align-items: center;
 `;
 
-const TitleBanner = posed.div({
-  hidden: { opacity: 0, width: "100%" },
-  visible: {
-    opacity: 1,
-    width: "100%",
-    transition: {
-      opacity: { ease: "easeIn", duration: 1000 }
-    }
-  }
-});
-
-const sketch = p => {
-  let points;
-  let noiseScaleX;
-  let noiseScaleY;
-  let stepsPerFrame;
-
-  p.setup = () => {
-    stepsPerFrame = 3;
-    p.createCanvas(p.windowWidth, p.windowHeight);
-    p.noFill();
-    p.strokeWeight(6);
-    p.stroke("#8B97B9");
-    reset();
-  };
-
-  p.draw = () => {
-    for (let i = 0; i < stepsPerFrame; i++) {
-      drawLine();
-    }
-  };
-
-  function reset() {
-    p.background("#BA6446");
-    noiseScaleX = p.random(0.001, 0.009);
-    noiseScaleY = p.random(0.004, 0.009);
-    resetPoints();
-  }
-
-  function resetPoints() {
-    points = [];
-    for (let i = 0; i < p.windowWidth; i++) {
-      points.push([i, 0]);
-    }
-  }
-
-  function drawLine() {
-    p.beginShape();
-    points.forEach(point => {
-      p.vertex(point[0], point[1]);
-      point[1] += p.noise(
-        point[0] * 1.1 * noiseScaleX,
-        p.frameCount * 0.001 * noiseScaleY
-      );
-    });
-    p.endShape();
-  }
-};
+const SocialMedia = styled.div`
+  width: 100vw;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #f9edd3;
+`;
 
 class IndexPage extends Component {
-  state = {
-    scrollY: null,
-    showBanner: false,
-    animationReady: false
-  };
-
-  updateScroll = () => {
-    this.setState({ scrollY: window.scrollY });
-  };
-
-  componentDidMount() {
-    this.setState({ animationReady: true });
-    setTimeout(() => {
-      this.setState({
-        showBanner: true
-      });
-    }, 1000);
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => this.updateScroll());
-    }
-  }
-
-  componentWillUnmount() {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => this.updateScroll());
-    }
-  }
-
   render() {
     return (
       <>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <MainWrapper>
-          <Canvas>
-            <P5Wrapper sketch={sketch} />
-          </Canvas>
-          {this.state.animationReady && (
-            <TitleBanner
-              key="Title Banner"
-              pose={this.state.showBanner ? "visible" : "hidden"}
-            >
-              <BannerWrapper>
-                <SweetcreamLogo />
-                <BiddefordSeal />
-              </BannerWrapper>
-            </TitleBanner>
-          )}
-        </MainWrapper>
+        <ReactPageScroller
+          ref={c => (this.reactPageScroller = c)}
+          animationTimer={1500}
+          pageOnChange={() => console.log("pageScrolled!!!")}
+        >
+          <SceneWrapper backgroundColor={GRAY}>
+            <BannerWrapper>
+              <SweetcreamLogo />
+              <SocialMedia>
+                <FaInstagram size={"4em"} />
+                <FaFacebook size={"4em"} />
+                <FaYelp size={"4em"} />
+              </SocialMedia>
+            </BannerWrapper>
+          </SceneWrapper>
+          <SceneWrapper backgroundColor={GREEN}>
+            {/* <h1>Scene 2</h1> */}
+            <Banner fill={VIOLET} />
+          </SceneWrapper>
+          <SceneWrapper backgroundColor={VIOLET}>
+            <h1>Scene 3</h1>
+          </SceneWrapper>
+          <SceneWrapper backgroundColor={PINK}>
+            <h1>Scene 4</h1>
+          </SceneWrapper>
+        </ReactPageScroller>
       </>
     );
   }
