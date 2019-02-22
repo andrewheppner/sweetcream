@@ -1,158 +1,115 @@
 import React, { Component } from "react";
-import styled from "styled-components";
-import posed from "react-pose";
 import SEO from "../components/seo";
-import { BiddefordSeal, SweetcreamLogo } from "../components/svgElements";
+import styled from "styled-components";
+import _ from "lodash";
+// import posed from "react-pose";
 
-if (typeof window === "undefined") {
-  global.window = {
-    performance: {
-      now: () => {}
-    },
-    addEventListener: () => {}
-  };
-  global.document = {
-    hasFocus: () => {}
-  };
-  global.screen = {
-    width: null,
-    height: null
-  };
-}
+const SCENE_SCROLL_LENGTH = 1000;
 
-const P5Wrapper = require("react-p5-wrapper");
-
-const MainWrapper = styled.div`
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
-const Canvas = styled.div`
-  position: fixed;
-  top: 0px;
+const PageOne = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
   left: 0px;
-  z-index: -1;
-  overflow-y: scroll;
+  top: 0px;
+  background: #f9edd3;
+  opacity: ${props => (props.active ? 1 : 0)};
+`;
+const PageTwo = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: #f1c87b;
+  opacity: ${props => (props.active ? 1 : 0)};
 `;
 
-const BannerWrapper = styled.div`
-  width: 100%;
-  padding-top: 35px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const PageThree = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: #efa57e;
+  opacity: ${props => (props.active ? 1 : 0)};
 `;
 
-const TitleBanner = posed.div({
-  hidden: { opacity: 0, width: "100%" },
-  visible: {
-    opacity: 1,
-    width: "100%",
-    transition: {
-      opacity: { ease: "easeIn", duration: 1000 }
-    }
-  }
-});
+const BigContainer = styled.div`
+  height: ${20 * SCENE_SCROLL_LENGTH}px;
+`;
 
-const sketch = p => {
-  let points;
-  let noiseScaleX;
-  let noiseScaleY;
-  let stepsPerFrame;
+const PageContainer = styled.div`
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  font-size: 3em;
+  color: white;
+`;
 
-  p.setup = () => {
-    stepsPerFrame = 3;
-    p.createCanvas(p.windowWidth, p.windowHeight);
-    p.noFill();
-    p.strokeWeight(6);
-    p.stroke("#8B97B9");
-    reset();
-  };
-
-  p.draw = () => {
-    for (let i = 0; i < stepsPerFrame; i++) {
-      drawLine();
-    }
-  };
-
-  function reset() {
-    p.background("#BA6446");
-    noiseScaleX = p.random(0.001, 0.009);
-    noiseScaleY = p.random(0.004, 0.009);
-    resetPoints();
-  }
-
-  function resetPoints() {
-    points = [];
-    for (let i = 0; i < p.windowWidth; i++) {
-      points.push([i, 0]);
-    }
-  }
-
-  function drawLine() {
-    p.beginShape();
-    points.forEach(point => {
-      p.vertex(point[0], point[1]);
-      point[1] += p.noise(
-        point[0] * 1.1 * noiseScaleX,
-        p.frameCount * 0.001 * noiseScaleY
-      );
-    });
-    p.endShape();
-  }
-};
+const Pages = [PageOne, PageTwo, PageThree];
 
 class IndexPage extends Component {
-  state = {
-    scrollY: null,
-    showBanner: false,
-    animationReady: false
-  };
+  constructor(props, context) {
+    super(props, context);
+    this.handleSceneTransition = this.handleSceneTransition.bind(this);
+    this.state = {
+      activeSceneIndex: 0
+    };
+  }
 
-  updateScroll = () => {
-    this.setState({ scrollY: window.scrollY });
-  };
+  handleSceneTransition() {
+    const { activeSceneIndex } = this.state;
+    if (
+      window.scrollY >
+      SCENE_SCROLL_LENGTH + activeSceneIndex * SCENE_SCROLL_LENGTH
+    ) {
+      this.setState({
+        activeSceneIndex: _.clamp(
+          Math.floor(window.scrollY / SCENE_SCROLL_LENGTH),
+          0,
+          2
+        )
+      });
+    } else if (
+      window.scrollY < activeSceneIndex * SCENE_SCROLL_LENGTH &&
+      activeSceneIndex > 0
+    ) {
+      this.setState({
+        activeSceneIndex: this.state.activeSceneIndex - 1
+      });
+    }
+  }
 
   componentDidMount() {
-    this.setState({ animationReady: true });
-    setTimeout(() => {
-      this.setState({
-        showBanner: true
-      });
-    }, 1000);
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => this.updateScroll());
-    }
+    window.addEventListener("scroll", this.handleSceneTransition);
   }
 
   componentWillUnmount() {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", () => this.updateScroll());
-    }
+    window.removeEventListener("scroll", this.handleSceneTransition);
   }
 
   render() {
+    const { activeSceneIndex } = this.state;
     return (
       <>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <MainWrapper>
-          <Canvas>
-            <P5Wrapper sketch={sketch} />
-          </Canvas>
-          {this.state.animationReady && (
-            <TitleBanner
-              key="Title Banner"
-              pose={this.state.showBanner ? "visible" : "hidden"}
-            >
-              <BannerWrapper>
-                <SweetcreamLogo />
-                <BiddefordSeal />
-              </BannerWrapper>
-            </TitleBanner>
-          )}
-        </MainWrapper>
+        <BigContainer>
+          <PageContainer>
+            {/* {Pages.map((Component, index) => (
+              <Component key={index} active={activeSceneIndex === index} />
+            ))} */}
+            <PageOne active={activeSceneIndex === 0}>
+              <span>xxxxxxxx</span>
+            </PageOne>
+            <PageTwo active={activeSceneIndex === 1}>
+              <span>yyyyyyyy</span>
+            </PageTwo>
+            <PageThree active={activeSceneIndex === 2}>
+              <span>zzzzzzzz</span>
+            </PageThree>
+          </PageContainer>
+        </BigContainer>
       </>
     );
   }
