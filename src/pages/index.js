@@ -12,6 +12,7 @@ import {
   BiddefordSeal,
   SweetcreamLogo,
   Banner,
+  BannerTwo,
   Watermelon,
   Brownie,
   PinkJaggedBlob
@@ -24,6 +25,7 @@ const GREEN = "#B8DDB9";
 const PINK = "#F48780";
 const OFFWHITE = "#FFFFF0";
 const WHITE = "#ffffff";
+const PEACH = "#ffb993";
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -50,6 +52,13 @@ const SceneWrapper = styled.div`
     color: #f9edd3;
     font-family: "AvertaBold";
   }
+
+  h4 {
+    font-size: 3rem;
+    color: #f9edd3;
+    font-family: "AvertaBold";
+    padding-left: 30px;
+  }
 `;
 
 const BannerWrapper = styled.div`
@@ -71,7 +80,9 @@ const SocialMedia = styled.div`
 `;
 
 const InfoBlockContainer = styled.div`
-  margin-top: 3%;
+  margin-top: 10%;
+  width: 90%;
+  height: 50%;
   display: flex;
   justify-content: space-between;
   alignt-items: center;
@@ -98,16 +109,16 @@ const BrownieWrapper = styled.div`
   height: fit-content;
   top: 50px;
   left: 100px;
-  z-index: 2;
+  z-index: 0;
 `;
 
 const BadgeWrapper = styled.div`
   position: absolute;
   width: 100%;
   height: fit-content;
-  top: 50px;
-  left: 150px;
-  z-index: 1;
+  top: -80px;
+  left: 100px;
+  z-index: -1;
 `;
 
 const PinkJaggedBlobWrapper = styled.div`
@@ -116,6 +127,83 @@ const PinkJaggedBlobWrapper = styled.div`
   right: 0px;
   height: 100%;
   width: 40%;
+`;
+
+const TextBox = styled.div`
+  width: 40%;
+  height: 100%;
+  border: 2px solid black;
+  text-align: justify;
+  box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.9);
+  padding: 30px;
+  background: white;
+  font-family: "Averta";
+  display: flex;
+  z-index: 1;
+
+  .bold {
+    font-family: 'AvertaBold'
+    font-size: 5rem;
+  }
+
+  .left {
+    padding: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-family: "AvertaBold";
+
+    span {
+      display: block;
+    }
+  }
+
+  .right {
+    padding: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    span {
+      display: block;
+    }
+  }
+
+  .center {
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    span {
+      display: block;
+    }
+
+    a {
+      color: black;
+    }
+  }
+`;
+
+const PositionalWrapper = styled.div`
+  position: absolute;
+  top: ${props => props.top}px;
+  right: ${props => props.right}px;
+  z-index: ${props => props.zIndex};
+`;
+
+const Center = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 `;
 
 class IndexPage extends Component {
@@ -128,52 +216,89 @@ class IndexPage extends Component {
           animationTimer={1500}
           pageOnChange={() => console.log("pageScrolled!!!")}
         >
-          <SceneWrapper backgroundColor={WHITE}>
-            <BannerWrapper>
-              <SweetcreamLogo />
-              <SocialMedia>
-                <FaInstagram size={"4em"} />
-                <FaFacebook size={"4em"} />
-                <FaYelp size={"4em"} />
-              </SocialMedia>
-              <InfoBlockContainer>
-                <InfoBlock>
-                  <span>
-                    <span className="intense day">SUN - TUES</span>
-                    <span>CLOSED</span>
-                  </span>
-                  <span>
-                    <span className="intense day">WED - FRI</span>
-                    <span>12P - 8P</span>
-                  </span>
-                  <span>
-                    <span className="intense day">SAT</span>
-                    <span>9P - 8P</span>
-                  </span>
-                </InfoBlock>
-                <InfoBlock>
-                  <span>
-                    <span>(207) 520-2386</span>
-                  </span>
-                </InfoBlock>
-              </InfoBlockContainer>
-            </BannerWrapper>
-          </SceneWrapper>
+          {/* <SceneWrapper backgroundColor={WHITE} /> */}
           <SceneWrapper backgroundColor={GREEN}>
-            <BrownieWrapper>
-              <Brownie />
-            </BrownieWrapper>
-            <BadgeWrapper>
-              <BiddefordSeal />
-            </BadgeWrapper>
-            <Banner fill={VIOLET} />
-          </SceneWrapper>
-          <SceneWrapper backgroundColor={VIOLET}>
-            <h1>Averta test</h1>
-            <Watermelon />
             <PinkJaggedBlobWrapper>
               <PinkJaggedBlob />
             </PinkJaggedBlobWrapper>
+            <BadgeWrapper>
+              <BiddefordSeal />
+            </BadgeWrapper>
+            <BannerWrapper>
+              <SweetcreamLogo />
+              <InfoBlockContainer>
+                <TextBox>
+                  <div className="left">
+                    <span>MON</span>
+                    <span>TUE-FRI</span>
+                    <span>SAT</span>
+                    <span>SUN</span>
+                  </div>
+                  <div className="right">
+                    <span>Closed</span>
+                    <span>12P-8P</span>
+                    <span>9A-8P</span>
+                    <span>12P-8P</span>
+                  </div>
+                </TextBox>
+                <TextBox>
+                  <div className="center">
+                    <p>
+                      <span>410 Main St.</span>
+                      <span>Building 13 - Suite 138</span>
+                      <span>Biddeford, Maine</span>
+                    </p>
+                    <span>(207) 520-2386</span>
+                    <a href="mailto:info@sweetcreamdairy.com">
+                      info@sweetcreamdairy.com
+                    </a>
+                  </div>
+                </TextBox>
+              </InfoBlockContainer>
+            </BannerWrapper>
+          </SceneWrapper>
+          <SceneWrapper backgroundColor={PINK}>
+            <PositionalWrapper top={50} right={-250} zIndex={3}>
+              <TextBox>
+                <div className="center">
+                  <p>
+                    <span>
+                      SIMPLE We keep our ingredient list short. We believe that
+                      fewer components translates to better, brighter, and more
+                      genuine flavor.
+                    </span>
+                  </p>
+                  <p>
+                    <span>
+                      NATURAL We do not use corn syrup, artificial flavorings,
+                      gums, or emulsifiers.
+                    </span>
+                  </p>
+                  <p>
+                    <span>
+                      LOCAL We source our ingredients and flavorings directly
+                      from Maine farms whenever possible.
+                    </span>
+                  </p>
+                </div>
+              </TextBox>
+            </PositionalWrapper>
+            <div>
+              <h1>46%</h1>
+              <h4>
+                of total food costs went directly into the hands of local
+                farmers
+              </h4>
+            </div>
+          </SceneWrapper>
+          <SceneWrapper backgroundColor={VIOLET}>
+            <PinkJaggedBlobWrapper>
+              <PinkJaggedBlob />
+            </PinkJaggedBlobWrapper>
+            <InfoBlockContainer>
+              <TextBox>Cake Info</TextBox>
+              <TextBox>IceCream Flavours</TextBox>
+            </InfoBlockContainer>
           </SceneWrapper>
           <SceneWrapper backgroundColor={PINK}>
             <h1>Scene 4</h1>
