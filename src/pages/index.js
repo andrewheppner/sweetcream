@@ -15,7 +15,10 @@ import {
   BannerTwo,
   Watermelon,
   Brownie,
-  PinkJaggedBlob
+  PinkJaggedBlob,
+  SeedsOne,
+  SeedsTwo,
+  GreenBlob
 } from "../components/svgElements";
 
 const YELLOW = "#FEE7A4";
@@ -28,6 +31,9 @@ const WHITE = "#ffffff";
 const PEACH = "#ffb993";
 
 const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+  }
   @font-face {
     font-family: 'AvertaBold';
     src: url(${AvertaBold});
@@ -110,6 +116,35 @@ const BrownieWrapper = styled.div`
   top: 50px;
   left: 100px;
   z-index: 0;
+  animation: verticalSlide 5s steps(22, start);
+  animation-delay: 3s;
+  transform: translateY(-400px);
+
+  @keyframes verticalSlide {
+    0% {
+      transform: translateY(-200px);
+    }
+
+    10% {
+      transform: translateY(-20px);
+    }
+
+    30% {
+      transform: translateY(50px);
+    }
+
+    50% {
+      transform: translateY(30px);
+    }
+
+    70% {
+      transform: translateY(500px);
+    }
+
+    100% {
+      transform: translateY(1200px);
+    }
+  }
 `;
 
 const BadgeWrapper = styled.div`
@@ -129,6 +164,42 @@ const PinkJaggedBlobWrapper = styled.div`
   width: 40%;
 `;
 
+const GreenBlobWrapper = styled.div`
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  height: 100%;
+  width: 50%;
+  z-index: -1;
+  animation: jiggle 9s steps(30, start);
+
+  @keyframes jiggle {
+    0% {
+      transform: translateX(20px);
+    }
+
+    10% {
+      transform: translateX(70px);
+    }
+
+    30% {
+      transform: translateX(150px);
+    }
+
+    50% {
+      transform: translateX(90px);
+    }
+
+    70% {
+      transform: translateX(30px);
+    }
+
+    100% {
+      transform: translateX(0px);
+    }
+  }
+`;
+
 const TextBox = styled.div`
   width: 40%;
   height: 100%;
@@ -140,6 +211,12 @@ const TextBox = styled.div`
   font-family: "Averta";
   display: flex;
   z-index: 1;
+
+  &.fullWidth {
+    width: 80%;
+    height: 65%;
+    margin: auto;
+  }
 
   .bold {
     font-family: 'AvertaBold'
@@ -218,6 +295,9 @@ class IndexPage extends Component {
         >
           {/* <SceneWrapper backgroundColor={WHITE} /> */}
           <SceneWrapper backgroundColor={GREEN}>
+            <BrownieWrapper>
+              <Brownie />
+            </BrownieWrapper>
             <PinkJaggedBlobWrapper>
               <PinkJaggedBlob />
             </PinkJaggedBlobWrapper>
@@ -249,15 +329,16 @@ class IndexPage extends Component {
                       <span>Biddeford, Maine</span>
                     </p>
                     <span>(207) 520-2386</span>
-                    <a href="mailto:info@sweetcreamdairy.com">
-                      info@sweetcreamdairy.com
-                    </a>
+                    <a href="/google">info@sweetcreamdairy.com</a>
                   </div>
                 </TextBox>
               </InfoBlockContainer>
             </BannerWrapper>
           </SceneWrapper>
           <SceneWrapper backgroundColor={PINK}>
+            <GreenBlobWrapper>
+              <GreenBlob />
+            </GreenBlobWrapper>
             <PositionalWrapper top={50} right={-250} zIndex={3}>
               <TextBox>
                 <div className="center">
@@ -283,6 +364,9 @@ class IndexPage extends Component {
                 </div>
               </TextBox>
             </PositionalWrapper>
+            <PositionalWrapper top={200} right={50} zIndex={2}>
+              <SeedsTwo />
+            </PositionalWrapper>
             <div>
               <h1>46%</h1>
               <h4>
@@ -295,10 +379,8 @@ class IndexPage extends Component {
             <PinkJaggedBlobWrapper>
               <PinkJaggedBlob />
             </PinkJaggedBlobWrapper>
-            <InfoBlockContainer>
-              <TextBox>Cake Info</TextBox>
-              <TextBox>IceCream Flavours</TextBox>
-            </InfoBlockContainer>
+
+            <TextBox className="fullWidth">Cake Info</TextBox>
           </SceneWrapper>
           <SceneWrapper backgroundColor={PINK}>
             <h1>Scene 4</h1>
