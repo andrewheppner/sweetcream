@@ -16,9 +16,14 @@ import {
   Watermelon,
   Brownie,
   PinkJaggedBlob,
+  YellowBlob,
   SeedsOne,
+  Strawberry,
   SeedsTwo,
-  GreenBlob
+  GreenBlob,
+  Cone,
+  Peach,
+  Lime
 } from "../components/svgElements";
 
 const YELLOW = "#FEE7A4";
@@ -50,7 +55,7 @@ const SceneWrapper = styled.div`
   height: 100vh;
   width: 100vw;
   background: ${props => props.backgroundColor};
-  z-index: -1;
+  z-index: 0;
 
   h1 {
     padding: 30px;
@@ -118,33 +123,33 @@ const BrownieWrapper = styled.div`
   z-index: 0;
   animation: verticalSlide 5s steps(22, start);
   animation-delay: 3s;
-  transform: translateY(-400px);
+  // transform: translateY(-400px);
 
-  @keyframes verticalSlide {
-    0% {
-      transform: translateY(-200px);
-    }
+  // @keyframes verticalSlide {
+  //   0% {
+  //     transform: translateY(-200px);
+  //   }
 
-    10% {
-      transform: translateY(-20px);
-    }
+  //   10% {
+  //     transform: translateY(-20px);
+  //   }
 
-    30% {
-      transform: translateY(50px);
-    }
+  //   30% {
+  //     transform: translateY(50px);
+  //   }
 
-    50% {
-      transform: translateY(30px);
-    }
+  //   50% {
+  //     transform: translateY(30px);
+  //   }
 
-    70% {
-      transform: translateY(500px);
-    }
+  //   70% {
+  //     transform: translateY(500px);
+  //   }
 
-    100% {
-      transform: translateY(1200px);
-    }
-  }
+  //   100% {
+  //     transform: translateY(1200px);
+  //   }
+  // }
 `;
 
 const BadgeWrapper = styled.div`
@@ -213,7 +218,7 @@ const TextBox = styled.div`
   z-index: 1;
 
   &.fullWidth {
-    width: 80%;
+    width: 60%;
     height: 65%;
     margin: auto;
   }
@@ -264,6 +269,7 @@ const TextBox = styled.div`
 
     a {
       color: black;
+      z-index: 10;
     }
   }
 `;
@@ -288,104 +294,116 @@ class IndexPage extends Component {
     return (
       <>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <ReactPageScroller
+        {/* <ReactPageScroller
           ref={c => (this.reactPageScroller = c)}
           animationTimer={1500}
           pageOnChange={() => console.log("pageScrolled!!!")}
-        >
-          {/* <SceneWrapper backgroundColor={WHITE} /> */}
-          <SceneWrapper backgroundColor={GREEN}>
-            <BrownieWrapper>
-              <Brownie />
-            </BrownieWrapper>
-            <PinkJaggedBlobWrapper>
-              <PinkJaggedBlob />
-            </PinkJaggedBlobWrapper>
-            <BadgeWrapper>
-              <BiddefordSeal />
-            </BadgeWrapper>
-            <BannerWrapper>
-              <SweetcreamLogo />
-              <InfoBlockContainer>
-                <TextBox>
-                  <div className="left">
-                    <span>MON</span>
-                    <span>TUE-FRI</span>
-                    <span>SAT</span>
-                    <span>SUN</span>
-                  </div>
-                  <div className="right">
-                    <span>Closed</span>
-                    <span>12P-8P</span>
-                    <span>9A-8P</span>
-                    <span>12P-8P</span>
-                  </div>
-                </TextBox>
-                <TextBox>
-                  <div className="center">
-                    <p>
-                      <span>410 Main St.</span>
-                      <span>Building 13 - Suite 138</span>
-                      <span>Biddeford, Maine</span>
-                    </p>
-                    <span>(207) 520-2386</span>
-                    <a href="/google">info@sweetcreamdairy.com</a>
-                  </div>
-                </TextBox>
-              </InfoBlockContainer>
-            </BannerWrapper>
-          </SceneWrapper>
-          <SceneWrapper backgroundColor={PINK}>
-            <GreenBlobWrapper>
-              <GreenBlob />
-            </GreenBlobWrapper>
-            <PositionalWrapper top={50} right={-250} zIndex={3}>
+        > */}
+        {/* <SceneWrapper backgroundColor={WHITE} /> */}
+        <SceneWrapper backgroundColor={GREEN}>
+          <PinkJaggedBlobWrapper>
+            <PinkJaggedBlob />
+          </PinkJaggedBlobWrapper>
+          <PositionalWrapper top={20} right={20} zIndex={1}>
+            <Cone />
+          </PositionalWrapper>
+          <BadgeWrapper>
+            <BiddefordSeal />
+          </BadgeWrapper>
+          <BannerWrapper>
+            <SweetcreamLogo />
+            <InfoBlockContainer>
+              <TextBox>
+                <div className="left">
+                  <span>MON</span>
+                  <span>TUE-FRI</span>
+                  <span>SAT</span>
+                  <span>SUN</span>
+                </div>
+                <div className="right">
+                  <span>Closed</span>
+                  <span>12P-8P</span>
+                  <span>9A-8P</span>
+                  <span>12P-8P</span>
+                </div>
+              </TextBox>
               <TextBox>
                 <div className="center">
                   <p>
-                    <span>
-                      SIMPLE We keep our ingredient list short. We believe that
-                      fewer components translates to better, brighter, and more
-                      genuine flavor.
-                    </span>
+                    <span>410 Main St.</span>
+                    <span>Building 13 - Suite 138</span>
+                    <span>Biddeford, Maine</span>
                   </p>
-                  <p>
-                    <span>
-                      NATURAL We do not use corn syrup, artificial flavorings,
-                      gums, or emulsifiers.
-                    </span>
-                  </p>
-                  <p>
-                    <span>
-                      LOCAL We source our ingredients and flavorings directly
-                      from Maine farms whenever possible.
-                    </span>
-                  </p>
+                  <span>(207) 520-2386</span>
+                  <a href="www.twitter.com/gatsbyjs">Twitter</a>
                 </div>
               </TextBox>
-            </PositionalWrapper>
-            <PositionalWrapper top={200} right={50} zIndex={2}>
-              <SeedsTwo />
-            </PositionalWrapper>
-            <div>
-              <h1>46%</h1>
-              <h4>
-                of total food costs went directly into the hands of local
-                farmers
-              </h4>
-            </div>
-          </SceneWrapper>
-          <SceneWrapper backgroundColor={VIOLET}>
-            <PinkJaggedBlobWrapper>
-              <PinkJaggedBlob />
-            </PinkJaggedBlobWrapper>
-
-            <TextBox className="fullWidth">Cake Info</TextBox>
-          </SceneWrapper>
-          <SceneWrapper backgroundColor={PINK}>
-            <h1>Scene 4</h1>
-          </SceneWrapper>
-        </ReactPageScroller>
+            </InfoBlockContainer>
+          </BannerWrapper>
+        </SceneWrapper>
+        <SceneWrapper backgroundColor={PINK}>
+          <GreenBlobWrapper>
+            <GreenBlob />
+          </GreenBlobWrapper>
+          <PositionalWrapper top={50} right={-250} zIndex={3}>
+            <TextBox>
+              <div className="center">
+                <p>
+                  <span>
+                    SIMPLE We keep our ingredient list short. We believe that
+                    fewer components translates to better, brighter, and more
+                    genuine flavor.
+                  </span>
+                </p>
+                <p>
+                  <span>
+                    NATURAL We do not use corn syrup, artificial flavorings,
+                    gums, or emulsifiers.
+                  </span>
+                </p>
+                <p>
+                  <span>
+                    LOCAL We source our ingredients and flavorings directly from
+                    Maine farms whenever possible.
+                  </span>
+                </p>
+              </div>
+            </TextBox>
+          </PositionalWrapper>
+          <PositionalWrapper top={200} right={50} zIndex={2}>
+            <SeedsTwo />
+          </PositionalWrapper>
+          <div>
+            <h1>46%</h1>
+            <h4>
+              of total food costs went directly into the hands of local farmers
+            </h4>
+          </div>
+        </SceneWrapper>
+        <SceneWrapper backgroundColor={VIOLET}>
+          <PinkJaggedBlobWrapper>
+            <PinkJaggedBlob />
+          </PinkJaggedBlobWrapper>
+          <BrownieWrapper>
+            <Brownie />
+          </BrownieWrapper>
+          <TextBox className="fullWidth">Cake Info</TextBox>
+        </SceneWrapper>
+        <SceneWrapper backgroundColor={PEACH}>
+          <PositionalWrapper top={0} right={0} zIndex={1}>
+            <YellowBlob />
+          </PositionalWrapper>
+          <PositionalWrapper top={400} right={500} zIndex={1}>
+            <Peach />
+          </PositionalWrapper>
+          <PositionalWrapper top={200} right={300} zIndex={1}>
+            <Strawberry />
+          </PositionalWrapper>
+          <PositionalWrapper top={100} left={100} zIndex={1}>
+            <Lime />
+          </PositionalWrapper>
+        </SceneWrapper>
+        {/* </ReactPageScroller> */}
         <GlobalStyle />
       </>
     );
