@@ -6,7 +6,7 @@ const OFFWHITE = "#FFFFF0";
 
 const Header = styled.div`
   width: 100%;
-  height: 5%;
+  height: 50px;
   position: fixed;
   top: 0:
   left: 0;
