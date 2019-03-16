@@ -25,6 +25,7 @@
     "react-p5-wrapper": "^0.0.4",
     "react-page-scroller": "^1.4.3",
     "react-pose": "^4.0.7",
+    "react-scroll": "^1.7.11",
     "styled-components": "^4.1.3"
   },
   "keywords": [
