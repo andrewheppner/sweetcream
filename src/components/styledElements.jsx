@@ -14,6 +14,7 @@ export const SceneWrapper = styled.div`
     font-size: 12rem;
     color: #f9edd3;
     font-family: "AvertaBold";
+    z-index: 1;
   }
 
   h4 {

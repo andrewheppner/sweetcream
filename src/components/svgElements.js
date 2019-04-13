@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import scBadge from "../images/BiddefordSeal.svg";
-import scLogo from "../images/Sweetcream-Logo-PROD.svg";
+import scLogo from "../images/logo-green.svg";
 import { rotationBuilder } from "../helpers/animations";
 
 const Seal = styled.img`

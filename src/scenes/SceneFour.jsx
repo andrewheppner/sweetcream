@@ -1,25 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { Waypoint } from "react-waypoint";
 import { PositionalWrapper, SceneWrapper } from "../components/styledElements";
 import { YellowBlob, Peach, Strawberry, Lime } from "../components/svgElements";
 
-const PEACH = "#ffb993";
+const GREEN = "#B8DDB9";
 
-const SceneFour = () => (
-  <SceneWrapper backgroundColor={PEACH}>
-    <PositionalWrapper top={0} right={0} zIndex={1}>
-      <YellowBlob />
-    </PositionalWrapper>
-    <PositionalWrapper top={400} right={500} zIndex={1}>
-      <Peach />
-    </PositionalWrapper>
-    <PositionalWrapper top={200} right={300} zIndex={1}>
-      <Strawberry />
-    </PositionalWrapper>
-    <PositionalWrapper top={100} left={100} zIndex={1}>
-      <Lime />
-    </PositionalWrapper>
-  </SceneWrapper>
+const SceneFour = props => (
+  <Waypoint onEnter={() => props.handleEnter(4)} bottomOffset="99%">
+    <SceneWrapper backgroundColor={GREEN} />
+  </Waypoint>
 );
 
 export default SceneFour;
