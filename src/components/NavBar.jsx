@@ -48,13 +48,6 @@ const Header = styled.div`
   }
 `;
 
-const logos = {
-  1: GreenLogo,
-  2: YellowLogo,
-  3: OrangeLogo,
-  4: WhiteLogo
-};
-
 const NavBar = ({ color, logo }) => (
   <Header color={color}>
     <LogoWrapper onClick={() => navigate("/")}>

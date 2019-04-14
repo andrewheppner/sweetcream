@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { SceneWrapper } from "../components/styledElements";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import BadgeSvg from "../images/events_corner.svg";
 import CakeOneSvg from "../images/cake1.svg";
 import CakeTwoSvg from "../images/cake2.svg";

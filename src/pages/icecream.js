@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import { SceneWrapper } from "../components/styledElements";
 import BadgeSvg from "../images/icecream_corner.svg";
 import ChartSvg from "../images/chart.svg";
