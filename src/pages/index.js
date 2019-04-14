@@ -1,69 +1,42 @@
-import React, { Component } from "react";
-import styled, { createGlobalStyle } from "styled-components";
-import { Element } from "react-scroll";
+import React from "react";
+import styled from "styled-components";
+import { SceneWrapper } from "../components/styledElements";
+import GreenLogo from "../images/logo-green.svg";
+import ConeSvg from "../images/cone.svg";
+import BadgeSvg from "../images/landing_corner.svg";
+import Layout from "../components/Layout";
 
-// Importing fonts
-import AvertaBold from "../fonts/AvertaDemoPE-ExtraBold.otf";
-import Averta from "../fonts/AvertaDemoPECuttedDemo-Regular.otf";
+const WHITE = "#FFFFFF";
 
-import SEO from "../components/seo";
-import NavBar from "../components/NavBar";
-
-import SceneOne from "../scenes/SceneOne";
-import SceneTwo from "../scenes/SceneTwo";
-import SceneThree from "../scenes/SceneThree";
-import SceneFour from "../scenes/SceneFour";
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-  }
-  @font-face {
-    font-family: 'AvertaBold';
-    src: url(${AvertaBold});
-  }
-  @font-face {
-    font-family: 'Averta';
-    src: url(${Averta});
-  }
+const Cone = styled.div`
+  width: 15%;
+  height: auto;
+  position: absolute;
+  top: 20%;
+  right: 12%;
 `;
 
-class IndexPage extends Component {
-  constructor() {
-    super();
-    this.state = {
-      activeScene: 1
-    };
-    this.setActiveScene = this.setActiveScene.bind(this);
-  }
+const Badge = styled.div`
+  width: 15%;
+  height: auto;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+`;
 
-  setActiveScene(nextScene) {
-    this.setState({
-      activeScene: nextScene
-    });
-  }
-
-  render() {
-    return (
-      <>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-        <NavBar currentScene={this.state.activeScene} />
-        <Element name="SceneOne">
-          <SceneOne handleEnter={this.setActiveScene} />
-        </Element>
-        <Element name="SceneTwo">
-          <SceneTwo handleEnter={this.setActiveScene} />
-        </Element>
-        <Element name="SceneThree">
-          <SceneThree handleEnter={this.setActiveScene} />
-        </Element>
-        <Element name="SceneFour">
-          <SceneFour handleEnter={this.setActiveScene} />
-        </Element>
-        <GlobalStyle />
-      </>
-    );
-  }
-}
+const IndexPage = () => (
+  <>
+    <Layout color="#B8DDB9" logoSrc={GreenLogo}>
+      <SceneWrapper backgroundColor={WHITE}>
+        <Cone>
+          <img src={ConeSvg} />
+        </Cone>
+        <Badge>
+          <img src={BadgeSvg} />
+        </Badge>
+      </SceneWrapper>
+    </Layout>
+  </>
+);
 
 export default IndexPage;

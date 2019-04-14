@@ -1,27 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
-import GreenLogo from "../images/logo-green.svg";
-import WhiteLogo from "../images/logo-white.svg";
-import OrangeLogo from "../images/logo-orange.svg";
-import YellowLogo from "../images/logo-yellow.svg";
+import { Link, navigate } from "gatsby";
 import { FaInstagram } from "react-icons/fa";
-
-const getColor = index => {
-  switch (index) {
-    case 1:
-      return "#B8DDB9";
-
-    case 2:
-      return "#FBFBE3";
-
-    case 3:
-      return "#E5A88C";
-
-    default:
-      return "#FFFFFF";
-  }
-};
 
 const LogoWrapper = styled.div`
   width: 20%;
@@ -41,11 +21,11 @@ const Header = styled.div`
   font-family: "Averta";
   font-size: 1.2vw;
   padding-top: 3%;
-  color: ${props => getColor(props.currentScene)};
+  color: ${props => props.color};
 
   .instagram {
     font-size: 2vw;
-    color: ${props => getColor(props.currentScene)};
+    color: ${props => props.color};
   }
 
   .links {
@@ -60,7 +40,11 @@ const Header = styled.div`
   
   a {
     cursor: pointer;
+    text-decoration: none;
+  }
 
+  a:visited {
+    color: ${props => props.color};
   }
 `;
 
@@ -71,41 +55,16 @@ const logos = {
   4: WhiteLogo
 };
 
-const SCROLL_DURATION = 750;
-
-const NavBar = props => (
-  <Header currentScene={props.currentScene}>
-    <LogoWrapper>
-      <img src={logos[props.currentScene]} />
+const NavBar = ({ color, logo }) => (
+  <Header color={color}>
+    <LogoWrapper onClick={() => navigate("/")}>
+      <img src={logo} />
     </LogoWrapper>
+
     <div className="links">
-      <Link
-        activeClass="active"
-        to="SceneTwo"
-        spy={true}
-        smooth={true}
-        duration={SCROLL_DURATION}
-      >
-        Ice Cream
-      </Link>
-      <Link
-        activeClass="active"
-        to="SceneThree"
-        spy={true}
-        smooth={true}
-        duration={SCROLL_DURATION}
-      >
-        Events
-      </Link>
-      <Link
-        activeClass="active"
-        to="SceneFour"
-        spy={true}
-        smooth={true}
-        duration={SCROLL_DURATION}
-      >
-        Find Us
-      </Link>
+      <Link to="/icecream">Ice Cream</Link>
+      <Link to="/events">Events</Link>
+      <Link to="/findus">Find Us</Link>
       <a href="https://www.instagram.com/sweetcreamdairy/" target="blank">
         <FaInstagram className="instagram" />
       </a>

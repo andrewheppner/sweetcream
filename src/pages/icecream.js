@@ -1,16 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Waypoint } from "react-waypoint";
-import {
-  PositionalWrapper,
-  SceneWrapper,
-  TextBox
-} from "../components/styledElements";
-import { GreenBlob, SeedsTwo } from "../components/svgElements";
+import Layout from "../components/Layout";
+import { SceneWrapper } from "../components/styledElements";
 import BadgeSvg from "../images/icecream_corner.svg";
 import ChartSvg from "../images/chart.svg";
+import YellowLogo from "../images/logo-yellow.svg";
 
 const PINK = "#E5A88C";
+const YELLOW = "#FBFBE3";
 
 const Badge = styled.div`
   width: 15%;
@@ -28,18 +25,18 @@ const Chart = styled.div`
   right: 10%;
 `;
 
-const SceneTwo = props => (
+const SceneTwo = () => (
   <div>
-    <Waypoint onEnter={() => props.handleEnter(2)} bottomOffset="99%">
-      <SceneWrapper backgroundColor={PINK}>
+    <SceneWrapper backgroundColor={PINK}>
+      <Layout color={YELLOW} logoSrc={YellowLogo}>
         <Chart>
           <img src={ChartSvg} />
         </Chart>
         <Badge>
           <img src={BadgeSvg} />
         </Badge>
-      </SceneWrapper>
-    </Waypoint>
+      </Layout>
+    </SceneWrapper>
   </div>
 );
 

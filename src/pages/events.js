@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { SceneWrapper, TextBox } from "../components/styledElements";
-import { PinkJaggedBlob, Brownie } from "../components/svgElements";
-import { Waypoint } from "react-waypoint";
+import { SceneWrapper } from "../components/styledElements";
+import Layout from "../components/Layout";
 import BadgeSvg from "../images/events_corner.svg";
 import CakeOneSvg from "../images/cake1.svg";
 import CakeTwoSvg from "../images/cake2.svg";
 import CartSvg from "../images/catering_cart.svg";
+import OrangeLogo from "../images/logo-orange.svg";
 
 const YELLOW = "#FBFBE3";
+const ORANGE = "#E5A88C";
 
 const Badge = styled.div`
   width: 15%;
@@ -43,8 +44,8 @@ const CakeTwo = styled.div`
 `;
 
 const SceneThree = props => (
-  <Waypoint onEnter={() => props.handleEnter(3)} bottomOffset="99%">
-    <SceneWrapper backgroundColor={YELLOW}>
+  <SceneWrapper backgroundColor={YELLOW}>
+    <Layout color={ORANGE} logoSrc={OrangeLogo}>
       <CakeOne>
         <img src={CakeOneSvg} />
       </CakeOne>
@@ -57,8 +58,8 @@ const SceneThree = props => (
       <Cart>
         <img src={CartSvg} />
       </Cart>
-    </SceneWrapper>
-  </Waypoint>
+    </Layout>
+  </SceneWrapper>
 );
 
 export default SceneThree;
