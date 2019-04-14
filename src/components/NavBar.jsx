@@ -3,10 +3,7 @@ import styled from "styled-components";
 import { Link, navigate } from "gatsby";
 import { FaInstagram } from "react-icons/fa";
 
-const LogoWrapper = styled.div`
-  width: 20%;
-  height: auto;
-`;
+const LogoWrapper = styled.div``;
 
 const Header = styled.div`
   width: 100%;
@@ -50,9 +47,11 @@ const Header = styled.div`
 
 const NavBar = ({ color, logo }) => (
   <Header color={color}>
-    <LogoWrapper onClick={() => navigate("/")}>
-      <img src={logo} />
-    </LogoWrapper>
+    <img
+      src={logo}
+      style={{ height: "auto", width: "20%" }}
+      onClick={() => navigate("/")}
+    />
 
     <div className="links">
       <Link to="/icecream">Ice Cream</Link>
