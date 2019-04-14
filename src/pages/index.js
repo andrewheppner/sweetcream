@@ -9,16 +9,12 @@ import Layout from "../components/layout";
 const WHITE = "#FFFFFF";
 
 const Cone = styled.div`
-  width: 15%;
-  height: auto;
   position: absolute;
   top: 20%;
   right: 12%;
 `;
 
 const Badge = styled.div`
-  width: 15%;
-  height: auto;
   position: absolute;
   bottom: 0%;
   left: 0%;
@@ -29,10 +25,10 @@ const IndexPage = () => (
     <Layout color="#B8DDB9" logoSrc={GreenLogo}>
       <SceneWrapper backgroundColor={WHITE}>
         <Cone>
-          <img src={ConeSvg} />
+          <img src={ConeSvg} style={{ height: "auto", width: "15%" }} />
         </Cone>
         <Badge>
-          <img src={BadgeSvg} />
+          <img src={BadgeSvg} style={{ height: "auto", width: "15%" }} />
         </Badge>
       </SceneWrapper>
     </Layout>
