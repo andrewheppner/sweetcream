@@ -1,9 +1,57 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, navigate } from "gatsby";
-import { FaInstagram } from "react-icons/fa";
+import { slide as Menu } from "react-burger-menu";
+import { FaInstagram, FaBars } from "react-icons/fa";
+import SealSvg from "../images/BiddefordSeal.svg";
 
-const LogoWrapper = styled.div``;
+const MobileWrapper = styled.div`
+  display: none;
+
+  .mobile-logo {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding-top: 14px;
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    display: block;
+  }
+
+  .bm-burger-button {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    left: 20px;
+    top: 20px;
+    color: ${props => props.color};
+  }
+
+  .bm-cross-button {
+    right: 24px !important;
+  }
+
+  .bm-cross {
+    background: #b7daf3;
+    height: 35px !important;
+  }
+
+  .bm-menu {
+    background: #ffffff;
+    padding: 2.5em 1.5em 0;
+    font-size: 2em;
+  }
+
+  .bm-item {
+    display: inline-block;
+    color: #b7daf3;
+    text-decoration: none;
+    padding-bottom: 30%;
+    outline: none;
+    font-family: "Averta";
+  }
+`;
 
 const Header = styled.div`
   width: 100%;
@@ -19,6 +67,13 @@ const Header = styled.div`
   font-size: 1.2vw;
   padding-top: 3%;
   color: ${props => props.color};
+
+  @media only screen 
+    and (min-device-width: 375px) 
+    and (max-device-width: 812px) 
+    and (-webkit-min-device-pixel-ratio: 3) { 
+    display: none;
+  }
 
   .instagram {
     font-size: 2vw;
@@ -46,22 +101,41 @@ const Header = styled.div`
 `;
 
 const NavBar = ({ color, logo }) => (
-  <Header color={color}>
-    <img
-      src={logo}
-      style={{ height: "auto", width: "20%" }}
-      onClick={() => navigate("/")}
-    />
-
-    <div className="links">
-      <Link to="/icecream">Ice Cream</Link>
-      <Link to="/events">Events</Link>
-      <Link to="/findus">Find Us</Link>
-      <a href="https://www.instagram.com/sweetcreamdairy/" target="blank">
-        <FaInstagram className="instagram" />
-      </a>
-    </div>
-  </Header>
+  <>
+    <Header color={color}>
+      <img
+        src={logo}
+        style={{ height: "auto", width: "20%" }}
+        onClick={() => navigate("/")}
+      />
+      <div className="links">
+        <Link to="/icecream">Ice Cream</Link>
+        <Link to="/events">Events</Link>
+        <Link to="/findus">Find Us</Link>
+        <a href="https://www.instagram.com/sweetcreamdairy/" target="blank">
+          <FaInstagram className="instagram" />
+        </a>
+      </div>
+    </Header>
+    <MobileWrapper color={color}>
+      <div className="mobile-logo">
+        <img
+          src={logo}
+          style={{ height: "auto", width: "200px" }}
+          onClick={() => navigate("/")}
+        />
+      </div>
+      <Menu customBurgerIcon={<FaBars className="bars" />}>
+        <Link to="/">Home</Link>
+        <Link to="/icecream">Ice Cream</Link>
+        <Link to="/events">Events</Link>
+        <Link to="/findus">Find Us</Link>
+        <a href="https://www.instagram.com/sweetcreamdairy/" target="blank">
+          <FaInstagram className="instagram" />
+        </a>
+      </Menu>
+    </MobileWrapper>
+  </>
 );
 
 export default NavBar;
