@@ -15,7 +15,7 @@ const MobileWrapper = styled.div`
     padding-top: 14px;
   }
 
-  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     display: block;
   }
 
@@ -69,9 +69,8 @@ const Header = styled.div`
   color: ${props => props.color};
 
   @media only screen 
-    and (min-device-width: 375px) 
-    and (max-device-width: 812px) 
-    and (-webkit-min-device-pixel-ratio: 3) { 
+    and (min-device-width: 300px) 
+    and (max-device-width: 812px)  { 
     display: none;
   }
 
