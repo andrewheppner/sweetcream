@@ -33,19 +33,19 @@ const MobileWrapper = styled.div`
   }
 
   .bm-cross {
-    background: #b7daf3;
+    background: #b8ddb9;
     height: 35px !important;
   }
 
   .bm-menu {
     background: #ffffff;
     padding: 2.5em 1.5em 0;
-    font-size: 2em;
+    font-size: 1.75em;
   }
 
   .bm-item {
     display: inline-block;
-    color: #b7daf3;
+    color: #b8ddb9;
     text-decoration: none;
     padding-bottom: 30%;
     outline: none;
@@ -108,9 +108,9 @@ const NavBar = ({ color, logo }) => (
         onClick={() => navigate("/")}
       />
       <div className="links">
-        <Link to="/icecream">Ice Cream</Link>
-        <Link to="/events">Events</Link>
-        <Link to="/findus">Find Us</Link>
+        <Link to="/icecream">ICE CREAM</Link>
+        <Link to="/events">EVENTS</Link>
+        <Link to="/findus">FIND US</Link>
         <a href="https://www.instagram.com/sweetcreamdairy/" target="blank">
           <FaInstagram className="instagram" />
         </a>
@@ -125,10 +125,10 @@ const NavBar = ({ color, logo }) => (
         />
       </div>
       <Menu customBurgerIcon={<FaBars className="bars" />}>
-        <Link to="/">Home</Link>
-        <Link to="/icecream">Ice Cream</Link>
-        <Link to="/events">Events</Link>
-        <Link to="/findus">Find Us</Link>
+        <Link to="/">HOME</Link>
+        <Link to="/icecream">ICE CREAM</Link>
+        <Link to="/events">EVENTS</Link>
+        <Link to="/findus">FIND US</Link>
         <a href="https://www.instagram.com/sweetcreamdairy/" target="blank">
           <FaInstagram className="instagram" />
         </a>
