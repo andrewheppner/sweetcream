@@ -15,32 +15,56 @@ const Badge = styled.div`
   width: 15%;
   height: auto;
   position: absolute;
-  bottom: -8%;
-  right: -2%;
+  bottom: 0%;
+  right: 0%;
 `;
 
 const Cart = styled.div`
-  width: 20%;
+  width: 17%;
   height: auto;
   position: absolute;
-  bottom: 18%;
-  left: 10%;
+  bottom: 5%;
+  left: 7%;
 `;
 
 const CakeOne = styled.div`
-  width: 10%;
+  width: 7%;
   height: auto;
   position: absolute;
-  top: 15%;
+  top: 20%;
   right: 25%;
 `;
 
 const CakeTwo = styled.div`
-  width: 10%;
+  width: 7%;
   height: auto;
   position: absolute;
-  top: 23%;
+  top: 25%;
   right: 10%;
+`;
+
+const Heading = styled.div`
+  position: absolute;
+  top: ${props => props.top};
+  left: ${props => props.left};
+  font-family: AvertaBold;
+  font-size: 3.5vw;
+  color: ${props => props.color};
+`;
+
+const TextBlock = styled.div`
+  position: absolute;
+  width: 35%;
+  top: ${props => props.top};
+  left: ${props => props.left};
+  font-size: 1.2vw;
+  font-family: Averta;
+  color: ${props => props.color};
+  line-height: 27px;
+
+  .bold {
+    font-family: AvertaSemiBold;
+  }
 `;
 
 const SceneThree = props => (
@@ -58,6 +82,29 @@ const SceneThree = props => (
       <Cart>
         <img src={CartSvg} />
       </Cart>
+      <Heading top="20%" left="20%" color={ORANGE}>
+        <span>ICE CREAM CAKES</span>
+      </Heading>
+      <TextBlock top="30%" left="20%" color={ORANGE}>
+        <p>
+          <span className="bold">CLICK HERE</span> for our ice cream cake order
+          form.
+        </p>
+        <p>
+          Please allow at least 72 hours advance notice for ice cream cakes. For
+          any additional inquiries, please CONTACT US.
+        </p>
+      </TextBlock>
+
+      <Heading top="60%" left="45%" color={ORANGE}>
+        <span>CATERING</span>
+      </Heading>
+      <TextBlock top="70%" left="45%" color={ORANGE}>
+        <p>
+          Sweetcream comes to you! We offer catering services for parties and
+          events serving parties of all sizes. CONTACT US for more information.
+        </p>
+      </TextBlock>
     </Layout>
   </SceneWrapper>
 );
