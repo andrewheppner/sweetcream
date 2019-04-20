@@ -28,18 +28,18 @@ const Cart = styled.div`
 `;
 
 const CakeOne = styled.div`
-  width: 7%;
+  width: 9%;
   height: auto;
   position: absolute;
-  top: 20%;
+  top: 23%;
   right: 25%;
 `;
 
 const CakeTwo = styled.div`
-  width: 7%;
+  width: 9%;
   height: auto;
   position: absolute;
-  top: 25%;
+  top: 28%;
   right: 10%;
 `;
 
@@ -82,10 +82,10 @@ const SceneThree = props => (
       <Cart>
         <img src={CartSvg} />
       </Cart>
-      <Heading top="20%" left="20%" color={ORANGE}>
+      <Heading top="25%" left="20%" color={ORANGE}>
         <span>ICE CREAM CAKES</span>
       </Heading>
-      <TextBlock top="30%" left="20%" color={ORANGE}>
+      <TextBlock top="35%" left="20%" color={ORANGE}>
         <p>
           <span className="bold">CLICK HERE</span> for our ice cream cake order
           form.
@@ -96,10 +96,10 @@ const SceneThree = props => (
         </p>
       </TextBlock>
 
-      <Heading top="60%" left="45%" color={ORANGE}>
+      <Heading top="65%" left="45%" color={ORANGE}>
         <span>CATERING</span>
       </Heading>
-      <TextBlock top="70%" left="45%" color={ORANGE}>
+      <TextBlock top="75%" left="45%" color={ORANGE}>
         <p>
           Sweetcream comes to you! We offer catering services for parties and
           events serving parties of all sizes. CONTACT US for more information.

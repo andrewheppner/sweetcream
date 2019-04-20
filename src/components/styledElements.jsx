@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SceneWrapper = styled.div`
   position: relative;
   display: flex;
-  height: 100vh;
+  height: ${props => props.height || "100vh"};
   width: 100vw;
   background: ${props => props.backgroundColor};
   z-index: 0;

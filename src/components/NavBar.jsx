@@ -56,7 +56,7 @@ const MobileWrapper = styled.div`
 const Header = styled.div`
   width: 100%;
   height: auto;
-  position: fixed;
+  position: absolute;
   top: 0:
   left: 0;
   z-index: 5;
