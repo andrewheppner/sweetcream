@@ -8,6 +8,32 @@ import Layout from "../components/layout";
 
 const WHITE = "#FFFFFF";
 
+const IceCream = styled.div`
+  height: auto;
+  width: 15%;
+  position: absolute;
+  top: 20%;
+  right: 12%;
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    width: 20%;
+    right: 5%;
+    top: 15%;
+  }
+`;
+
+const BadgeWrapper = styled.div`
+  height: auto;
+  width: 15%;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    width: 35%;
+  }
+`;
+
 const TextBlock = styled.div`
   position: absolute;
   width: 50%;
@@ -21,32 +47,31 @@ const TextBlock = styled.div`
   .bold {
     font-family: AvertaSemiBold;
   }
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    font-size: 3.3vw;
+    top: 20%;
+    width: 60%;
+
+    p {
+      margin-bottom: 15%;
+    }
+
+    .bold {
+      font-size: 4vw;
+    }
+  }
 `;
 
 const IndexPage = () => (
   <SceneWrapper backgroundColor={WHITE}>
     <Layout color="#B8DDB9" logoSrc={GreenLogo}>
-      <img
-        src={ConeSvg}
-        style={{
-          height: "auto",
-          width: "15%",
-          position: "absolute",
-          top: "20%",
-          right: "12%"
-        }}
-      />
-
-      <img
-        src={BadgeSvg}
-        style={{
-          height: "auto",
-          width: "15%",
-          position: "absolute",
-          bottom: "0%",
-          left: "0%"
-        }}
-      />
+      <IceCream>
+        <img src={ConeSvg} />
+      </IceCream>
+      <BadgeWrapper>
+        <img src={BadgeSvg} />
+      </BadgeWrapper>
       <TextBlock>
         <p>
           <span className="bold">SIMPLE </span> We keep our ingredient list

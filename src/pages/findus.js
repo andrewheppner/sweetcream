@@ -16,6 +16,10 @@ const Badge = styled.div`
   position: absolute;
   bottom: 0%;
   right: 0%;
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    width: 45%;
+  }
 `;
 
 const Shop = styled.div`
@@ -24,6 +28,10 @@ const Shop = styled.div`
   position: absolute;
   top: 20%;
   left: 10%;
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    width: 45%;
+  }
 `;
 
 const Seeds = styled.div`
@@ -41,6 +49,10 @@ const Heading = styled.div`
   font-family: AvertaBold;
   font-size: 3.5vw;
   color: ${props => props.color};
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    font-size: 6vw;
+  }
 `;
 
 const TextBlock = styled.div`
@@ -61,6 +73,10 @@ const TextBlock = styled.div`
     font-family: AvertaBold;
     font-size: 3.5vw;
     margin-bottom: 5%;
+
+    @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+      font-size: 6vw;
+    }
   }
 
   p {
@@ -72,53 +88,72 @@ const TextBlock = styled.div`
   .bold {
     font-family: AvertaSemiBold;
   }
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    font-size: 2.7vw;
+  }
+`;
+
+const FindUsWrapper = styled.div`
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    ${TextBlock}.first {
+      top: 15%;
+      left: 55%;
+    }
+    ${TextBlock}.second {
+    }
+    ${TextBlock}.third {
+    }
+  }
 `;
 
 const SceneFour = props => (
   <SceneWrapper backgroundColor={GREEN} height="165vh">
-    <Layout color={WHITE} logoSrc={WhiteLogo}>
-      <Heading top="15%" left="10%" color={WHITE}>
-        SCOOP SHOP
-      </Heading>
-      <TextBlock top="17%" left="35%" color={WHITE}>
-        <p>
-          <span>40 Main st.</span>
-          <span>Building 13 - Suite 138</span>
-          <span>Biddeford, ME</span>
-        </p>
-        <p>
-          <span>Hours</span>
-          <span>Mon - CL</span>
-          <span>Tue: 12 - 8 PM</span>
-          <span>Wed: 12 - 8 PM</span>
-          <span>Thu: 12 - 8 PM</span>
-          <span>Fri: 12 - 8 PM</span>
-          <span>Sat: 12 - 8 PM</span>
-          <span>Sun: 12 - 8 PM</span>
-        </p>
-      </TextBlock>
-      <Shop>
-        <img src={ShopSvg} />
-      </Shop>
-      <TextBlock top="55%" left="0%" color={WHITE}>
-        <span className="header">PINTS</span>
-        <p>
-          <span>Coming Soon!</span>
-        </p>
-      </TextBlock>
-      <TextBlock top="55%" left="45%" color={WHITE}>
-        <span className="header">RESTAURANTS</span>
-        <p>
-          <span>Coming Soon!</span>
-        </p>
-      </TextBlock>
-      <Seeds>
-        <img src={SeedsSvg} />
-      </Seeds>
-      <Badge>
-        <img src={BadgeSvg} />
-      </Badge>
-    </Layout>
+    <FindUsWrapper>
+      <Layout color={WHITE} logoSrc={WhiteLogo}>
+        <Heading top="15%" left="10%" color={WHITE}>
+          SCOOP SHOP
+        </Heading>
+        <TextBlock top="17%" left="35%" color={WHITE} className="first">
+          <p>
+            <span>40 Main st.</span>
+            <span>Building 13 - Suite 138</span>
+            <span>Biddeford, ME</span>
+          </p>
+          <p>
+            <span>Hours</span>
+            <span>Mon - CL</span>
+            <span>Tue: 12 - 8 PM</span>
+            <span>Wed: 12 - 8 PM</span>
+            <span>Thu: 12 - 8 PM</span>
+            <span>Fri: 12 - 8 PM</span>
+            <span>Sat: 12 - 8 PM</span>
+            <span>Sun: 12 - 8 PM</span>
+          </p>
+        </TextBlock>
+        <Shop>
+          <img src={ShopSvg} />
+        </Shop>
+        <TextBlock top="55%" left="0%" color={WHITE} className="second">
+          <span className="header">PINTS</span>
+          <p>
+            <span>Coming Soon!</span>
+          </p>
+        </TextBlock>
+        <TextBlock top="55%" left="45%" color={WHITE} className="third">
+          <span className="header">RESTAURANTS</span>
+          <p>
+            <span>Coming Soon!</span>
+          </p>
+        </TextBlock>
+        <Seeds>
+          <img src={SeedsSvg} />
+        </Seeds>
+        <Badge>
+          <img src={BadgeSvg} />
+        </Badge>
+      </Layout>
+    </FindUsWrapper>
   </SceneWrapper>
 );
 

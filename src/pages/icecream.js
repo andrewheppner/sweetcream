@@ -17,6 +17,10 @@ const Badge = styled.div`
   position: absolute;
   bottom: 0%;
   left: 0%;
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    width: 35%;
+  }
 `;
 
 const Chart = styled.div`
@@ -26,6 +30,11 @@ const Chart = styled.div`
   top: 15%;
   right: 10%;
   animation: ${rotationBuilder()} 70s linear infinite;
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    width: 30%;
+    top: 23%;
+  }
 `;
 
 const Pens = styled.div`
@@ -34,6 +43,11 @@ const Pens = styled.div`
   position: absolute;
   top: 18%;
   right: 20%;
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    width: 30%;
+    top: 24%;
+  }
 `;
 
 const ChartText = styled.div`
@@ -47,13 +61,20 @@ const ChartText = styled.div`
   color: #fbfbe3;
   line-height: 20px;
   transform: rotate(-8deg);
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    top: 35%;
+    font-size: 1.7vw;
+    right: 5%;
+    width: 30%;
+  }
 `;
 
 const TextBlock = styled.div`
   position: absolute;
   width: 50%;
-  top: 15%;
-  left: 10%;
+  top: ${props => props.top};
+  left: ${props => props.left || "10%"};
   font-size: 1.1vw;
   font-family: Averta;
   color: #fbfbe3;
@@ -62,6 +83,13 @@ const TextBlock = styled.div`
   .bold {
     font-family: AvertaSemiBold;
   }
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    font-size: 2.7vw;
+    p {
+      margin-bottom: 15%;
+    }
+  }
 `;
 
 const Heading = styled.div`
@@ -69,6 +97,10 @@ const Heading = styled.div`
   font-size: 3.5vw;
   color: ${props => props.color};
   margin: 8% 0;
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    font-size: 6vw;
+  }
 `;
 
 const SourcingList = styled.div`
@@ -87,8 +119,25 @@ const SourcingList = styled.div`
   }
 `;
 
+const IceCreamWrapper = styled.div`
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    ${TextBlock}.first {
+      top: 10%;
+      width: 80%;
+    }
+    ${TextBlock}.second {
+      top: 23%;
+      width: 45%;
+    }
+    ${TextBlock}.third {
+      top: 50%;
+      width: 80%;
+    }
+  }
+`;
+
 const SceneTwo = () => (
-  <div>
+  <IceCreamWrapper>
     <SceneWrapper backgroundColor={PINK} height="185vh">
       <Layout color={YELLOW} logoSrc={YellowLogo}>
         <Chart>
@@ -100,7 +149,7 @@ const SceneTwo = () => (
         <Badge>
           <img src={BadgeSvg} />
         </Badge>
-        <TextBlock>
+        <TextBlock className="first" top="15%">
           <p>
             We make ice cream because we love eating it! Our hope is to find the
             most delicious version of each flavor, whether it be an old classic
@@ -108,6 +157,8 @@ const SceneTwo = () => (
             recipes and have found that keeping our recipes simple and sourcing
             our ingredients responsibly most often leads to the best results.
           </p>
+        </TextBlock>
+        <TextBlock className="second" top="22%" width>
           <Heading>SIMPLICITY</Heading>
           <p>
             We keep our ingredient list short. We believe that fewer components
@@ -118,14 +169,17 @@ const SceneTwo = () => (
             and your local grocery store. You’ll probably find most of our
             ingredients at home in your kitchen pantry!
           </p>
+        </TextBlock>
+        <TextBlock className="third" top="40%">
           <Heading>SOURCING</Heading>
           <p>
             Our goal is to reinvest as much of our sales as possible back into
             the local economy. We source our ingredients and flavorings directly
             from Maine farms and producers whenever possible. That means direct,
             hand to hand transactions with the farmers themselves. In 2017,
-            32.4% of our food costs were sourced in this manner. In 2018, 47% of
-            our food costs went to the following farms and producers.
+            <span className="bold"> 32.4%</span> of our food costs were sourced
+            in this manner. In 2018, <span className="bold">47%</span> of our
+            food costs went to the following farms and producers.
           </p>
           <SourcingList>
             <div className="column">
@@ -159,7 +213,7 @@ const SceneTwo = () => (
         </ChartText>
       </Layout>
     </SceneWrapper>
-  </div>
+  </IceCreamWrapper>
 );
 
 export default SceneTwo;

@@ -83,15 +83,12 @@ const Header = styled.div`
     width: 40%;
     display: flex;
     justify-content: space-between;
-
-    .active {
-     
-    }
   }
   
   a {
     cursor: pointer;
     text-decoration: none;
+    color: ${props => props.color};
   }
 
   a:visited {
