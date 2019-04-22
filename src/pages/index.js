@@ -52,9 +52,10 @@ const TextBlock = styled.div`
     font-size: 3.3vw;
     top: 20%;
     width: 60%;
+    line-height: 20px;
 
     p {
-      margin-bottom: 15%;
+      margin-bottom: 22%;
     }
 
     .bold {

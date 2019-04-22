@@ -85,9 +85,10 @@ const TextBlock = styled.div`
   }
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    line-height: 15px;
     font-size: 2.7vw;
     p {
-      margin-bottom: 15%;
+      margin-bottom: 10%;
     }
   }
 `;
@@ -116,6 +117,9 @@ const SourcingList = styled.div`
     span {
       margin-bottom: 5%;
     }
+  }
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    margin: 7% 0;
   }
 `;
 
