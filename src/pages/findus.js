@@ -40,7 +40,7 @@ const Seeds = styled.div`
   height: auto;
   position: absolute;
   top: 77%;
-  left: 30%;
+  left: 35%;
 `;
 
 const Heading = styled.div`
@@ -104,6 +104,14 @@ const FindUsWrapper = styled.div`
     .scoop-heading {
       left: 10%;
     }
+
+    ${TextBlock}.second {
+      top: 50%;
+    }
+
+    ${TextBlock}.third {
+      top: 50%;
+    }
   }
 `;
 
@@ -134,13 +142,13 @@ const SceneFour = props => (
         <Shop>
           <img src={ShopSvg} />
         </Shop>
-        <TextBlock top="65%" left="0%" color={WHITE} className="second">
+        <TextBlock top="65%" left="5%" color={WHITE} className="second">
           <span className="header">PINTS</span>
           <p>
             <span>Coming Soon!</span>
           </p>
         </TextBlock>
-        <TextBlock top="65%" left="45%" color={WHITE} className="third">
+        <TextBlock top="65%" left="50%" color={WHITE} className="third">
           <span className="header">RESTAURANTS</span>
           <p>
             <span>Coming Soon!</span>
