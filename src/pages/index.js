@@ -39,7 +39,7 @@ const TextBlock = styled.div`
   width: 50%;
   top: 25%;
   left: 10%;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   font-family: Averta;
   color: #b8ddb9;
   line-height: 30px;
@@ -49,7 +49,7 @@ const TextBlock = styled.div`
   }
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    font-size: 3.3vw;
+    font-size: 3vw;
     top: 20%;
     width: 60%;
     line-height: 20px;

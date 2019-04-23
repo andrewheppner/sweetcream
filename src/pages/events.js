@@ -24,7 +24,7 @@ const Badge = styled.div`
 `;
 
 const Cart = styled.div`
-  width: 17%;
+  width: 25%;
   height: auto;
   position: absolute;
   bottom: 5%;
@@ -32,32 +32,34 @@ const Cart = styled.div`
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 35%;
-    bottom: 15%;
+    bottom: 30%;
   }
 `;
 
 const CakeOne = styled.div`
-  width: 9%;
+  width: 13%;
   height: auto;
   position: absolute;
-  top: 23%;
-  right: 10%;
+  top: 15%;
+  right: 30%;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    width: 20%;
-    top: 15%;
+    width: 15%;
+    top: 20%;
+    right: 20%;
   }
 `;
 
 const CakeTwo = styled.div`
-  width: 9%;
+  width: 15%;
   height: auto;
   position: absolute;
   top: 28%;
-  right: 15%;
+  right: 10%;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    width: 18%;
+    width: 13%;
+    right: 7%;
   }
 `;
 
@@ -79,7 +81,7 @@ const TextBlock = styled.div`
   width: 35%;
   top: ${props => props.top};
   left: ${props => props.left};
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-family: Averta;
   color: ${props => props.color};
   line-height: 27px;
@@ -97,28 +99,30 @@ const TextBlock = styled.div`
 const EventsWrapper = styled.div`
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     ${TextBlock}.first {
-      top: 25%;
+      top: 20%;
       width: 50%;
       left: 7%;
     }
     ${TextBlock}.second {
       top: 60%;
       width: 45%;
+      left: 50%;
     }
 
     ${Heading}.first {
-      top: 20%;
+      top: 15%;
       left: 7%;
     }
 
     ${Heading}.second {
       top: 55%;
+      left: 50%;
     }
   }
 `;
 
 const SceneThree = props => (
-  <SceneWrapper backgroundColor={YELLOW}>
+  <SceneWrapper backgroundColor={YELLOW} height="150vh">
     <EventsWrapper>
       <Layout color={ORANGE} logoSrc={OrangeLogo}>
         <CakeOne>
@@ -133,10 +137,10 @@ const SceneThree = props => (
         <Cart>
           <img src={CartSvg} />
         </Cart>
-        <Heading top="25%" left="20%" color={ORANGE} className="first">
+        <Heading top="17%" left="10%" color={ORANGE} className="first">
           <span>ICE CREAM CAKES</span>
         </Heading>
-        <TextBlock top="35%" left="20%" color={ORANGE} className="first">
+        <TextBlock top="25%" left="10%" color={ORANGE} className="first">
           <p>
             <span className="bold">CLICK HERE</span> for our ice cream cake
             order form.
@@ -147,10 +151,10 @@ const SceneThree = props => (
           </p>
         </TextBlock>
 
-        <Heading top="65%" left="45%" color={ORANGE} className="second">
+        <Heading top="60%" left="50%" color={ORANGE} className="second">
           <span>CATERING</span>
         </Heading>
-        <TextBlock top="75%" left="45%" color={ORANGE} className="second">
+        <TextBlock top="68%" left="50%" color={ORANGE} className="second">
           <p>
             Sweetcream comes to you! We offer catering services for parties and
             events serving parties of all sizes. CONTACT US for more

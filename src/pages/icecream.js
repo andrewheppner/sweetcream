@@ -75,7 +75,7 @@ const TextBlock = styled.div`
   width: 50%;
   top: ${props => props.top};
   left: ${props => props.left || "10%"};
-  font-size: 1.1vw;
+  font-size: 1vw;
   font-family: Averta;
   color: #fbfbe3;
   line-height: 20px;
@@ -97,7 +97,7 @@ const Heading = styled.div`
   font-family: AvertaBold;
   font-size: 3.5vw;
   color: ${props => props.color};
-  margin: 8% 0;
+  margin: 5% 0;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     font-size: 6vw;
@@ -162,7 +162,7 @@ const SceneTwo = () => (
             our ingredients responsibly most often leads to the best results.
           </p>
         </TextBlock>
-        <TextBlock className="second" top="22%" width>
+        <TextBlock className="second" top="25%" width>
           <Heading>SIMPLICITY</Heading>
           <p>
             We keep our ingredient list short. We believe that fewer components
@@ -174,7 +174,7 @@ const SceneTwo = () => (
             ingredients at home in your kitchen pantry!
           </p>
         </TextBlock>
-        <TextBlock className="third" top="40%">
+        <TextBlock className="third" top="43%">
           <Heading>SOURCING</Heading>
           <p>
             Our goal is to reinvest as much of our sales as possible back into

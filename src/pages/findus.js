@@ -27,10 +27,11 @@ const Shop = styled.div`
   height: auto;
   position: absolute;
   top: 20%;
-  left: 10%;
+  left: 22%;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 45%;
+    left: 10%;
   }
 `;
 
@@ -58,9 +59,9 @@ const Heading = styled.div`
 const TextBlock = styled.div`
   position: absolute;
   width: 40%;
-  font-size: 1.1vw;
+  font-size: 1vw;
   font-family: Averta;
-  line-height: 30px;
+  line-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,9 +101,8 @@ const FindUsWrapper = styled.div`
       top: 15%;
       left: 55%;
     }
-    ${TextBlock}.second {
-    }
-    ${TextBlock}.third {
+    .scoop-heading {
+      left: 10%;
     }
   }
 `;
@@ -111,10 +111,10 @@ const SceneFour = props => (
   <SceneWrapper backgroundColor={GREEN} height="165vh">
     <FindUsWrapper>
       <Layout color={WHITE} logoSrc={WhiteLogo}>
-        <Heading top="15%" left="10%" color={WHITE}>
+        <Heading top="15%" left="22%" color={WHITE} className="scoop-heading">
           SCOOP SHOP
         </Heading>
-        <TextBlock top="17%" left="35%" color={WHITE} className="first">
+        <TextBlock top="17%" left="45%" color={WHITE} className="first">
           <p>
             <span>40 Main st.</span>
             <span>Building 13 - Suite 138</span>
@@ -140,7 +140,7 @@ const SceneFour = props => (
             <span>Coming Soon!</span>
           </p>
         </TextBlock>
-        <TextBlock top="55%" left="45%" color={WHITE} className="third">
+        <TextBlock top="55%" left="55%" color={WHITE} className="third">
           <span className="header">RESTAURANTS</span>
           <p>
             <span>Coming Soon!</span>
