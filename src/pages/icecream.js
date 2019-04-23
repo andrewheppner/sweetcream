@@ -6,6 +6,7 @@ import BadgeSvg from "../images/icecream_corner.svg";
 import ChartSvg from "../images/chart.svg";
 import PensSvg from "../images/pens.svg";
 import YellowLogo from "../images/logo-yellow.svg";
+import ArrowSvg from "../images/arrow.svg";
 import { rotationBuilder } from "../helpers/animations";
 
 const PINK = "#E5A88C";
@@ -29,7 +30,7 @@ const Chart = styled.div`
   position: absolute;
   top: 15%;
   right: 10%;
-  animation: ${rotationBuilder()} 70s linear infinite;
+  animation: ${rotationBuilder()} 60s steps(60, start) infinite;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 30%;
@@ -50,6 +51,19 @@ const Pens = styled.div`
   }
 `;
 
+const Arrow = styled.div`
+  width: 3%;
+  height: auto;
+  position: absolute;
+  top: 35%;
+  right: 10%;
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    width: 4%;
+    top: 33%;
+  }
+`;
+
 const ChartText = styled.div`
   position: absolute;
   width: 15%;
@@ -63,8 +77,9 @@ const ChartText = styled.div`
   transform: rotate(-8deg);
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    top: 35%;
+    top: 37%;
     font-size: 1.7vw;
+    line-height: 10px;
     right: 5%;
     width: 30%;
   }
@@ -215,6 +230,9 @@ const SceneTwo = () => (
             track of the temperature of the ice cream mix during pasteurization.
           </p>
         </ChartText>
+        <Arrow>
+          <img src={ArrowSvg} />
+        </Arrow>
       </Layout>
     </SceneWrapper>
   </IceCreamWrapper>
