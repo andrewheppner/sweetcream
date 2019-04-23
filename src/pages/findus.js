@@ -39,7 +39,7 @@ const Seeds = styled.div`
   width: 15%;
   height: auto;
   position: absolute;
-  top: 70%;
+  top: 77%;
   left: 30%;
 `;
 
@@ -134,13 +134,13 @@ const SceneFour = props => (
         <Shop>
           <img src={ShopSvg} />
         </Shop>
-        <TextBlock top="55%" left="0%" color={WHITE} className="second">
+        <TextBlock top="65%" left="0%" color={WHITE} className="second">
           <span className="header">PINTS</span>
           <p>
             <span>Coming Soon!</span>
           </p>
         </TextBlock>
-        <TextBlock top="55%" left="55%" color={WHITE} className="third">
+        <TextBlock top="65%" left="45%" color={WHITE} className="third">
           <span className="header">RESTAURANTS</span>
           <p>
             <span>Coming Soon!</span>
