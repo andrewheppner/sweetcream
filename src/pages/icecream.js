@@ -5,11 +5,11 @@ import { SceneWrapper } from "../components/styledElements";
 import BadgeSvg from "../images/icecream_corner.svg";
 import ChartSvg from "../images/chart.svg";
 import PensSvg from "../images/pens.svg";
-import YellowLogo from "../images/logo-yellow.svg";
+import LogoSvg from "../images/logo.svg";
 import ArrowSvg from "../images/arrow.svg";
 import { rotationBuilder } from "../helpers/animations";
 
-const PINK = "#F1B9A2";
+const PINK = "#e0dbed";
 const YELLOW = "#FBFBE3";
 
 const Badge = styled.div`
@@ -72,7 +72,7 @@ const ChartText = styled.div`
   right: 10%;
   font-size: 0.8vw;
   font-family: Averta;
-  color: #fbfbe3;
+  color: #414042;
   line-height: 20px;
   transform: rotate(-8deg);
 
@@ -92,7 +92,7 @@ const TextBlock = styled.div`
   left: ${props => props.left || "10%"};
   font-size: 1vw;
   font-family: Averta;
-  color: #fbfbe3;
+  color: #414042;
   line-height: 20px;
 
   .bold {
@@ -158,7 +158,7 @@ const IceCreamWrapper = styled.div`
 const SceneTwo = () => (
   <IceCreamWrapper>
     <SceneWrapper backgroundColor={PINK} height="185vh">
-      <Layout color={YELLOW} logoSrc={YellowLogo}>
+      <Layout color="#414042" logoSrc={LogoSvg}>
         <Chart>
           <img src={ChartSvg} />
         </Chart>

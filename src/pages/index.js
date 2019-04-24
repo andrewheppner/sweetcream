@@ -1,13 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { SceneWrapper } from "../components/styledElements";
-import GreenLogo from "../images/logo-green.svg";
+import LogoSvg from "../images/logo.svg";
 import ConeSvg from "../images/cone.svg";
 import BadgeSvg from "../images/landing_corner.svg";
 import WaveSvg from "../images/wave.svg";
 import Layout from "../components/layout";
 
-const WHITE = "#FFFFFF";
 const PALE_PINK = "#E4C1C0";
 
 const IceCream = styled.div`
@@ -53,7 +52,7 @@ const TextBlock = styled.div`
   left: 10%;
   font-size: 1.1vw;
   font-family: Averta;
-  color: #000;
+  color: #414042;
   line-height: 30px;
 
   .bold {
@@ -78,7 +77,7 @@ const TextBlock = styled.div`
 
 const IndexPage = () => (
   <SceneWrapper backgroundColor={PALE_PINK}>
-    <Layout color="#000" logoSrc={GreenLogo}>
+    <Layout color="#414042" logoSrc={LogoSvg}>
       <IceCream>
         <img src={ConeSvg} />
       </IceCream>

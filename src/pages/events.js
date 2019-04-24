@@ -6,10 +6,11 @@ import BadgeSvg from "../images/events_corner.svg";
 import CakeOneSvg from "../images/cake1.svg";
 import CakeTwoSvg from "../images/cake2.svg";
 import CartSvg from "../images/catering_cart.svg";
-import OrangeLogo from "../images/logo-orange.svg";
+import LogoSvg from "../images/logo.svg";
 
-const YELLOW = "#FBFBE3";
+const YELLOW = "#faf9e1";
 const ORANGE = "#E5A88C";
+const CHARCOAL = "#414042";
 
 const Badge = styled.div`
   width: 15%;
@@ -124,7 +125,7 @@ const EventsWrapper = styled.div`
 const SceneThree = props => (
   <SceneWrapper backgroundColor={YELLOW} height="150vh">
     <EventsWrapper>
-      <Layout color={ORANGE} logoSrc={OrangeLogo}>
+      <Layout color={CHARCOAL} logoSrc={LogoSvg}>
         <CakeOne>
           <img src={CakeOneSvg} />
         </CakeOne>
@@ -137,10 +138,10 @@ const SceneThree = props => (
         <Cart>
           <img src={CartSvg} />
         </Cart>
-        <Heading top="17%" left="10%" color={ORANGE} className="first">
+        <Heading top="17%" left="10%" color={CHARCOAL} className="first">
           <span>ICE CREAM CAKES</span>
         </Heading>
-        <TextBlock top="25%" left="10%" color={ORANGE} className="first">
+        <TextBlock top="25%" left="10%" color={CHARCOAL} className="first">
           <p>
             <span>
               We offer numerous ways to customize your very own ice cream cake!
@@ -160,10 +161,10 @@ const SceneThree = props => (
           </p>
         </TextBlock>
 
-        <Heading top="60%" left="50%" color={ORANGE} className="second">
+        <Heading top="60%" left="50%" color={CHARCOAL} className="second">
           <span>CATERING</span>
         </Heading>
-        <TextBlock top="68%" left="50%" color={ORANGE} className="second">
+        <TextBlock top="68%" left="50%" color={CHARCOAL} className="second">
           <p>
             Sweetcream comes to you! We offer catering services for parties and
             events serving parties of all sizes. CONTACT US for more

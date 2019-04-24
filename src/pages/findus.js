@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { SceneWrapper } from "../components/styledElements";
 import Layout from "../components/layout";
-import WhiteLogo from "../images/logo-white.svg";
+import LogoSvg from "../images/logo.svg";
 import ShopSvg from "../images/shop.svg";
 import SeedsSvg from "../images/seeds.svg";
 import BadgeSvg from "../images/findus_corner.svg";
 
-const GREEN = "#B8DDB9";
+const GREEN = "#d0e8cc";
 const WHITE = "#FFFFFF";
+const CHARCOAL = "#414042";
 
 const Badge = styled.div`
   width: 15%;
@@ -118,11 +119,16 @@ const FindUsWrapper = styled.div`
 const SceneFour = props => (
   <SceneWrapper backgroundColor={GREEN} height="165vh">
     <FindUsWrapper>
-      <Layout color={WHITE} logoSrc={WhiteLogo}>
-        <Heading top="15%" left="22%" color={WHITE} className="scoop-heading">
+      <Layout color={CHARCOAL} logoSrc={LogoSvg}>
+        <Heading
+          top="15%"
+          left="22%"
+          color={CHARCOAL}
+          className="scoop-heading"
+        >
           SCOOP SHOP
         </Heading>
-        <TextBlock top="25%" left="42%" color={WHITE} className="first">
+        <TextBlock top="25%" left="42%" color={CHARCOAL} className="first">
           <p>
             <span>40 Main st.</span>
             <span>Building 13 - Suite 138</span>
@@ -142,13 +148,13 @@ const SceneFour = props => (
         <Shop>
           <img src={ShopSvg} />
         </Shop>
-        <TextBlock top="65%" left="5%" color={WHITE} className="second">
+        <TextBlock top="65%" left="5%" color={CHARCOAL} className="second">
           <span className="header">PINTS</span>
           <p>
             <span>Coming Soon!</span>
           </p>
         </TextBlock>
-        <TextBlock top="65%" left="50%" color={WHITE} className="third">
+        <TextBlock top="65%" left="50%" color={CHARCOAL} className="third">
           <span className="header">RESTAURANTS</span>
           <p>
             <span>Coming Soon!</span>
