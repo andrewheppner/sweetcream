@@ -9,7 +9,7 @@ import YellowLogo from "../images/logo-yellow.svg";
 import ArrowSvg from "../images/arrow.svg";
 import { rotationBuilder } from "../helpers/animations";
 
-const PINK = "#E5A88C";
+const PINK = "#F1B9A2";
 const YELLOW = "#FBFBE3";
 
 const Badge = styled.div`
@@ -30,7 +30,7 @@ const Chart = styled.div`
   position: absolute;
   top: 15%;
   right: 10%;
-  animation: ${rotationBuilder()} 60s steps(60, start) infinite;
+  animation: ${rotationBuilder()} 250s steps(60, start) infinite;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 30%;

@@ -142,6 +142,15 @@ const SceneThree = props => (
         </Heading>
         <TextBlock top="25%" left="10%" color={ORANGE} className="first">
           <p>
+            <span>
+              We offer numerous ways to customize your very own ice cream cake!
+              First, choose your size. Our 6” cake feeds 8-10 people while our
+              9” cake feeds 16-20 people. You then get to pick from an array of
+              different ice cream flavors, mix-ins, toppings, frostings and even
+              sides so that you can make it truly your own.
+            </span>
+          </p>
+          <p>
             <span className="bold">CLICK HERE</span> for our ice cream cake
             order form.
           </p>

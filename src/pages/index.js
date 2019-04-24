@@ -4,9 +4,11 @@ import { SceneWrapper } from "../components/styledElements";
 import GreenLogo from "../images/logo-green.svg";
 import ConeSvg from "../images/cone.svg";
 import BadgeSvg from "../images/landing_corner.svg";
+import WaveSvg from "../images/wave.svg";
 import Layout from "../components/layout";
 
 const WHITE = "#FFFFFF";
+const PALE_PINK = "#E4C1C0";
 
 const IceCream = styled.div`
   height: auto;
@@ -14,6 +16,7 @@ const IceCream = styled.div`
   position: absolute;
   top: 20%;
   right: 12%;
+  z-index: 2;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 20%;
@@ -22,12 +25,21 @@ const IceCream = styled.div`
   }
 `;
 
+const Wave = styled.div`
+  width: 100%;
+  position: absolute;
+  bottom: -2%;
+  left: 0%;
+  z-index: 0;
+`;
+
 const BadgeWrapper = styled.div`
   height: auto;
   width: 15%;
   position: absolute;
   bottom: 0%;
   left: 0%;
+  z-index: 2;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 35%;
@@ -41,7 +53,7 @@ const TextBlock = styled.div`
   left: 10%;
   font-size: 1.1vw;
   font-family: Averta;
-  color: #b8ddb9;
+  color: #000;
   line-height: 30px;
 
   .bold {
@@ -65,14 +77,17 @@ const TextBlock = styled.div`
 `;
 
 const IndexPage = () => (
-  <SceneWrapper backgroundColor={WHITE}>
-    <Layout color="#B8DDB9" logoSrc={GreenLogo}>
+  <SceneWrapper backgroundColor={PALE_PINK}>
+    <Layout color="#000" logoSrc={GreenLogo}>
       <IceCream>
         <img src={ConeSvg} />
       </IceCream>
       <BadgeWrapper>
         <img src={BadgeSvg} />
       </BadgeWrapper>
+      <Wave>
+        <img src={WaveSvg} />
+      </Wave>
       <TextBlock>
         <p>
           <span className="bold">SIMPLE </span> We keep our ingredient list
