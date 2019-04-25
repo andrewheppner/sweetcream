@@ -109,7 +109,7 @@ const NavBar = () => (
     <Header>
       <img
         src={LogoSvg}
-        style={{ height: "auto", width: "20%" }}
+        style={{ height: "auto", width: "20%", cursor: "pointer" }}
         onClick={() => navigate("/")}
       />
       <div className="links">

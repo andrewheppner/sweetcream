@@ -46,7 +46,7 @@ const BadgeWrapper = styled.div`
 const TextBlock = styled.div`
   position: absolute;
   width: 50%;
-  top: 25%;
+  top: 30%;
   left: 10%;
   font-size: 1.1vw;
   font-family: Averta;

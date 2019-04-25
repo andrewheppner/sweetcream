@@ -4,6 +4,7 @@ import { SceneWrapper } from "../components/styledElements";
 import BadgeSvg from "../images/events_corner.svg";
 import CakeSvg from "../images/cake.svg";
 import CartSvg from "../images/catering_cart.svg";
+import { cartAnimation } from "../helpers/animations";
 
 const YELLOW = "#faf9e1";
 const ORANGE = "#E5A88C";
@@ -27,6 +28,10 @@ const Cart = styled.div`
   position: absolute;
   bottom: 5%;
   left: 7%;
+
+  &:hover {
+    animation: ${cartAnimation} 2s steps(5, end) forwards;
+  }
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 35%;
@@ -62,8 +67,11 @@ const Heading = styled.div`
 `;
 
 const TextBlock = styled.div`
+  &.first {
+    width: 45%;
+  }
   position: absolute;
-  width: 35%;
+  width: 40%;
   top: ${props => props.top};
   left: ${props => props.left};
   font-size: 1vw;
@@ -73,6 +81,11 @@ const TextBlock = styled.div`
 
   .bold {
     font-family: AvertaSemiBold;
+  }
+
+  a {
+    color: ${props => props.color};
+    text-decoration: none;
   }
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -137,7 +150,8 @@ const SceneThree = props => (
         </p>
         <p>
           Please allow at least 72 hours advance notice for ice cream cakes. For
-          any additional inquiries, please CONTACT US.
+          any additional inquiries, please{" "}
+          <a href="mailto:info@sweetcreamdairy.com">CONTACT US</a>.
         </p>
       </TextBlock>
 
@@ -147,7 +161,9 @@ const SceneThree = props => (
       <TextBlock top="68%" left="50%" color={CHARCOAL} className="second">
         <p>
           Sweetcream comes to you! We offer catering services for parties and
-          events serving parties of all sizes. CONTACT US for more information.
+          events serving parties of all sizes.{" "}
+          <a href="mailto:info@sweetcreamdairy.com">CONTACT US</a> for more
+          information.
         </p>
       </TextBlock>
     </EventsWrapper>

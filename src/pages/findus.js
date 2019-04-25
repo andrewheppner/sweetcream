@@ -60,7 +60,7 @@ const TextBlock = styled.div`
   width: 40%;
   font-size: 1vw;
   font-family: Averta;
-  line-height: 20px;
+  line-height: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
