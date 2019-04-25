@@ -5,6 +5,7 @@ module.exports = {
     author: `Jon Denton & Jacqui Defranca`
   },
   plugins: [
+    `gatsby-plugin-layout`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-styled-components`

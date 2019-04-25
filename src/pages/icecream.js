@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Layout from "../components/layout";
 import { SceneWrapper } from "../components/styledElements";
 import BadgeSvg from "../images/icecream_corner.svg";
 import ChartSvg from "../images/chart.svg";
 import PensSvg from "../images/pens.svg";
-import LogoSvg from "../images/logo.svg";
 import ArrowSvg from "../images/arrow.svg";
 import { rotationBuilder } from "../helpers/animations";
 
@@ -35,19 +33,20 @@ const Chart = styled.div`
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 30%;
     top: 23%;
+    right: 5%;
   }
 `;
 
 const Pens = styled.div`
-  width: 20%;
+  width: 15%;
   height: auto;
   position: absolute;
-  top: 18%;
+  top: 25%;
   right: 20%;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    width: 30%;
-    top: 24%;
+    width: 25%;
+    top: 27%;
   }
 `;
 
@@ -93,7 +92,7 @@ const TextBlock = styled.div`
   font-size: 1vw;
   font-family: Averta;
   color: #414042;
-  line-height: 20px;
+  line-height: 27px;
 
   .bold {
     font-family: AvertaSemiBold;
@@ -158,82 +157,80 @@ const IceCreamWrapper = styled.div`
 const SceneTwo = () => (
   <IceCreamWrapper>
     <SceneWrapper backgroundColor={PINK} height="185vh">
-      <Layout color="#414042" logoSrc={LogoSvg}>
-        <Chart>
-          <img src={ChartSvg} />
-        </Chart>
-        <Pens>
-          <img src={PensSvg} />
-        </Pens>
-        <Badge>
-          <img src={BadgeSvg} />
-        </Badge>
-        <TextBlock className="first" top="15%">
-          <p>
-            We make ice cream because we love eating it! Our hope is to find the
-            most delicious version of each flavor, whether it be an old classic
-            or a fresh new idea. We are always tweaking and improving our
-            recipes and have found that keeping our recipes simple and sourcing
-            our ingredients responsibly most often leads to the best results.
-          </p>
-        </TextBlock>
-        <TextBlock className="second" top="25%" width>
-          <Heading>SIMPLICITY</Heading>
-          <p>
-            We keep our ingredient list short. We believe that fewer components
-            translates to better, brighter, and more genuine flavor. We chose to
-            pasteurize our own mix so that we could avoid industrial ingredients
-            like gums, emulsifiers and artificial flavorings. Instead, we choose
-            to work with ingredients you’d likely find at the farmer’s market
-            and your local grocery store. You’ll probably find most of our
-            ingredients at home in your kitchen pantry!
-          </p>
-        </TextBlock>
-        <TextBlock className="third" top="43%">
-          <Heading>SOURCING</Heading>
-          <p>
-            Our goal is to reinvest as much of our sales as possible back into
-            the local economy. We source our ingredients and flavorings directly
-            from Maine farms and producers whenever possible. That means direct,
-            hand to hand transactions with the farmers themselves. In 2017,
-            <span className="bold"> 32.4%</span> of our food costs were sourced
-            in this manner. In 2018, <span className="bold">47%</span> of our
-            food costs went to the following farms and producers.
-          </p>
-          <SourcingList>
-            <div className="column">
-              <span>Blue Sky Produce</span>
-              <span>Doles Orchard</span>
-              <span>Elements Coffee</span>
-              <span>Frith Farm</span>
-              <span>Harris Farm</span>
-              <span>Foxes Ridge Farm</span>
-              <span>McDougal Orchards</span>
-            </div>
-            <div className="column">
-              <span>Our Farm</span>
-              <span>Sawyer's Maple Farm</span>
-              <span>Snell Farm</span>
-              <span>Speckled Ax Coffee</span>
-              <span>Stevenson's Strawberries</span>
-              <span>The Farm</span>
-            </div>
-          </SourcingList>
-          <p>
-            We are committed to doing this assessment every year and reporting
-            the results honestly and openly.
-          </p>
-        </TextBlock>
-        <ChartText>
-          <p>
-            Recorder charts! You'll see these in the back of our shop. They keep
-            track of the temperature of the ice cream mix during pasteurization.
-          </p>
-        </ChartText>
-        <Arrow>
-          <img src={ArrowSvg} />
-        </Arrow>
-      </Layout>
+      <Chart>
+        <img src={ChartSvg} />
+      </Chart>
+      <Pens>
+        <img src={PensSvg} />
+      </Pens>
+      <Badge>
+        <img src={BadgeSvg} />
+      </Badge>
+      <TextBlock className="first" top="15%">
+        <p>
+          We make ice cream because we love eating it! Our hope is to find the
+          most delicious version of each flavor, whether it be an old classic or
+          a fresh new idea. We are always tweaking and improving our recipes and
+          have found that keeping our recipes simple and sourcing our
+          ingredients responsibly most often leads to the best results.
+        </p>
+      </TextBlock>
+      <TextBlock className="second" top="25%" width>
+        <Heading>SIMPLICITY</Heading>
+        <p>
+          We keep our ingredient list short. We believe that fewer components
+          translates to better, brighter, and more genuine flavor. We chose to
+          pasteurize our own mix so that we could avoid industrial ingredients
+          like gums, emulsifiers and artificial flavorings. Instead, we choose
+          to work with ingredients you’d likely find at the farmer’s market and
+          your local grocery store. You’ll probably find most of our ingredients
+          at home in your kitchen pantry!
+        </p>
+      </TextBlock>
+      <TextBlock className="third" top="43%">
+        <Heading>SOURCING</Heading>
+        <p>
+          Our goal is to reinvest as much of our sales as possible back into the
+          local economy. We source our ingredients and flavorings directly from
+          Maine farms and producers whenever possible. That means direct, hand
+          to hand transactions with the farmers themselves. In 2017,
+          <span className="bold"> 32.4%</span> of our food costs were sourced in
+          this manner. In 2018, <span className="bold">47%</span> of our food
+          costs went to the following farms and producers.
+        </p>
+        <SourcingList>
+          <div className="column">
+            <span>Blue Sky Produce</span>
+            <span>Doles Orchard</span>
+            <span>Elements Coffee</span>
+            <span>Frith Farm</span>
+            <span>Harris Farm</span>
+            <span>Foxes Ridge Farm</span>
+            <span>McDougal Orchards</span>
+          </div>
+          <div className="column">
+            <span>Our Farm</span>
+            <span>Sawyer's Maple Farm</span>
+            <span>Snell Farm</span>
+            <span>Speckled Ax Coffee</span>
+            <span>Stevenson's Strawberries</span>
+            <span>The Farm</span>
+          </div>
+        </SourcingList>
+        <p>
+          We are committed to doing this assessment every year and reporting the
+          results honestly and openly.
+        </p>
+      </TextBlock>
+      <ChartText>
+        <p>
+          Recorder charts! You'll see these in the back of our shop. They keep
+          track of the temperature of the ice cream mix during pasteurization.
+        </p>
+      </ChartText>
+      <Arrow>
+        <img src={ArrowSvg} />
+      </Arrow>
     </SceneWrapper>
   </IceCreamWrapper>
 );

@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { SceneWrapper } from "../components/styledElements";
-import Layout from "../components/layout";
-import LogoSvg from "../images/logo.svg";
 import ShopSvg from "../images/shop.svg";
 import SeedsSvg from "../images/seeds.svg";
 import BadgeSvg from "../images/findus_corner.svg";
@@ -119,54 +117,48 @@ const FindUsWrapper = styled.div`
 const SceneFour = props => (
   <SceneWrapper backgroundColor={GREEN} height="165vh">
     <FindUsWrapper>
-      <Layout color={CHARCOAL} logoSrc={LogoSvg}>
-        <Heading
-          top="15%"
-          left="22%"
-          color={CHARCOAL}
-          className="scoop-heading"
-        >
-          SCOOP SHOP
-        </Heading>
-        <TextBlock top="25%" left="42%" color={CHARCOAL} className="first">
-          <p>
-            <span>40 Main st.</span>
-            <span>Building 13 - Suite 138</span>
-            <span>Biddeford, ME</span>
-          </p>
-          <p>
-            <span>Hours</span>
-            <span>Mon - CL</span>
-            <span>Tue: 12 - 8 PM</span>
-            <span>Wed: 12 - 8 PM</span>
-            <span>Thu: 12 - 8 PM</span>
-            <span>Fri: 12 - 8 PM</span>
-            <span>Sat: 12 - 8 PM</span>
-            <span>Sun: 12 - 8 PM</span>
-          </p>
-        </TextBlock>
-        <Shop>
-          <img src={ShopSvg} />
-        </Shop>
-        <TextBlock top="65%" left="5%" color={CHARCOAL} className="second">
-          <span className="header">PINTS</span>
-          <p>
-            <span>Coming Soon!</span>
-          </p>
-        </TextBlock>
-        <TextBlock top="65%" left="50%" color={CHARCOAL} className="third">
-          <span className="header">RESTAURANTS</span>
-          <p>
-            <span>Coming Soon!</span>
-          </p>
-        </TextBlock>
-        <Seeds>
-          <img src={SeedsSvg} />
-        </Seeds>
-        <Badge>
-          <img src={BadgeSvg} />
-        </Badge>
-      </Layout>
+      <Heading top="15%" left="22%" color={CHARCOAL} className="scoop-heading">
+        SCOOP SHOP
+      </Heading>
+      <TextBlock top="25%" left="42%" color={CHARCOAL} className="first">
+        <p>
+          <span>40 Main st.</span>
+          <span>Building 13 - Suite 138</span>
+          <span>Biddeford, ME</span>
+          <span>207-520-2386</span>
+        </p>
+        <p>
+          <span>Hours</span>
+          <span>Mon - CL</span>
+          <span>Tue: 12 - 8 PM</span>
+          <span>Wed: 12 - 8 PM</span>
+          <span>Thu: 12 - 8 PM</span>
+          <span>Fri: 12 - 8 PM</span>
+          <span>Sat: 12 - 8 PM</span>
+          <span>Sun: 12 - 8 PM</span>
+        </p>
+      </TextBlock>
+      <Shop>
+        <img src={ShopSvg} />
+      </Shop>
+      <TextBlock top="65%" left="5%" color={CHARCOAL} className="second">
+        <span className="header">PINTS</span>
+        <p>
+          <span>Coming Soon!</span>
+        </p>
+      </TextBlock>
+      <TextBlock top="65%" left="50%" color={CHARCOAL} className="third">
+        <span className="header">RESTAURANTS</span>
+        <p>
+          <span>Coming Soon!</span>
+        </p>
+      </TextBlock>
+      <Seeds>
+        <img src={SeedsSvg} />
+      </Seeds>
+      <Badge>
+        <img src={BadgeSvg} />
+      </Badge>
     </FindUsWrapper>
   </SceneWrapper>
 );

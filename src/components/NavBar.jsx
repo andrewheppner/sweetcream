@@ -3,7 +3,9 @@ import styled from "styled-components";
 import { Link, navigate } from "gatsby";
 import { slide as Menu } from "react-burger-menu";
 import { FaInstagram, FaBars } from "react-icons/fa";
-import SealSvg from "../images/BiddefordSeal.svg";
+import LogoSvg from "../images/logo.svg";
+
+const CHARCOAL = "#414042";
 
 const MobileWrapper = styled.div`
   display: none;
@@ -13,10 +15,14 @@ const MobileWrapper = styled.div`
     justify-content: center;
     width: 100vw;
     padding-top: 14px;
+    position: absolute;
+    z-index: 2;
   }
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     display: block;
+    position: absolute;
+    top: 0%;
   }
 
   .bm-burger-button {
@@ -25,7 +31,7 @@ const MobileWrapper = styled.div`
     height: 30px;
     left: 20px;
     top: 20px;
-    color: ${props => props.color};
+    color: ${CHARCOAL};
   }
 
   .bm-cross-button {
@@ -33,7 +39,7 @@ const MobileWrapper = styled.div`
   }
 
   .bm-cross {
-    background: #b8ddb9;
+    background: ${CHARCOAL};
     height: 35px !important;
   }
 
@@ -45,7 +51,7 @@ const MobileWrapper = styled.div`
 
   .bm-item {
     display: inline-block;
-    color: #b8ddb9;
+    color: ${CHARCOAL};
     text-decoration: none;
     padding-bottom: 30%;
     outline: none;
@@ -66,7 +72,7 @@ const Header = styled.div`
   font-family: "Averta";
   font-size: 1.2vw;
   padding-top: 3%;
-  color: ${props => props.color};
+  color: ${CHARCOAL};
 
   @media only screen 
     and (min-device-width: 300px) 
@@ -76,7 +82,7 @@ const Header = styled.div`
 
   .instagram {
     font-size: 2vw;
-    color: ${props => props.color};
+    color: ${CHARCOAL};
   }
 
   .links {
@@ -88,19 +94,21 @@ const Header = styled.div`
   a {
     cursor: pointer;
     text-decoration: none;
-    color: ${props => props.color};
+    font-family: "AvertaBold";
+    color: ${CHARCOAL};
+    
   }
 
   a:visited {
-    color: ${props => props.color};
+    color: ${CHARCOAL};
   }
 `;
 
-const NavBar = ({ color, logo }) => (
+const NavBar = () => (
   <>
-    <Header color={color}>
+    <Header>
       <img
-        src={logo}
+        src={LogoSvg}
         style={{ height: "auto", width: "20%" }}
         onClick={() => navigate("/")}
       />
@@ -113,10 +121,10 @@ const NavBar = ({ color, logo }) => (
         </a>
       </div>
     </Header>
-    <MobileWrapper color={color}>
+    <MobileWrapper>
       <div className="mobile-logo">
         <img
-          src={logo}
+          src={LogoSvg}
           style={{ height: "auto", width: "200px" }}
           onClick={() => navigate("/")}
         />

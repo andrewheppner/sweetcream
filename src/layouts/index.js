@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./NavBar";
+import NavBar from "../components/NavBar";
 import { createGlobalStyle } from "styled-components";
 
 // Importing fonts
@@ -27,10 +27,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Layout = ({ children, color, logoSrc }) => (
+const Layout = ({ children }) => (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <NavBar color={color} logo={logoSrc} />
+    <NavBar />
     <GlobalStyle />
     {children}
   </>

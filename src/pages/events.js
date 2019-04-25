@@ -1,12 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { SceneWrapper } from "../components/styledElements";
-import Layout from "../components/layout";
 import BadgeSvg from "../images/events_corner.svg";
-import CakeOneSvg from "../images/cake1.svg";
-import CakeTwoSvg from "../images/cake2.svg";
+import CakeSvg from "../images/cake.svg";
 import CartSvg from "../images/catering_cart.svg";
-import LogoSvg from "../images/logo.svg";
 
 const YELLOW = "#faf9e1";
 const ORANGE = "#E5A88C";
@@ -33,34 +30,21 @@ const Cart = styled.div`
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 35%;
-    bottom: 30%;
+    bottom: 20%;
   }
 `;
 
 const CakeOne = styled.div`
-  width: 13%;
+  width: 25%;
   height: auto;
   position: absolute;
   top: 15%;
-  right: 30%;
-
-  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    width: 15%;
-    top: 20%;
-    right: 20%;
-  }
-`;
-
-const CakeTwo = styled.div`
-  width: 15%;
-  height: auto;
-  position: absolute;
-  top: 28%;
   right: 10%;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    width: 13%;
-    right: 7%;
+    width: 30%;
+    top: 20%;
+    right: 5%;
   }
 `;
 
@@ -105,7 +89,7 @@ const EventsWrapper = styled.div`
       left: 7%;
     }
     ${TextBlock}.second {
-      top: 60%;
+      top: 70%;
       width: 45%;
       left: 50%;
     }
@@ -116,7 +100,7 @@ const EventsWrapper = styled.div`
     }
 
     ${Heading}.second {
-      top: 55%;
+      top: 65%;
       left: 50%;
     }
   }
@@ -125,53 +109,47 @@ const EventsWrapper = styled.div`
 const SceneThree = props => (
   <SceneWrapper backgroundColor={YELLOW} height="150vh">
     <EventsWrapper>
-      <Layout color={CHARCOAL} logoSrc={LogoSvg}>
-        <CakeOne>
-          <img src={CakeOneSvg} />
-        </CakeOne>
-        <CakeTwo>
-          <img src={CakeTwoSvg} />
-        </CakeTwo>
-        <Badge>
-          <img src={BadgeSvg} />
-        </Badge>
-        <Cart>
-          <img src={CartSvg} />
-        </Cart>
-        <Heading top="17%" left="10%" color={CHARCOAL} className="first">
-          <span>ICE CREAM CAKES</span>
-        </Heading>
-        <TextBlock top="25%" left="10%" color={CHARCOAL} className="first">
-          <p>
-            <span>
-              We offer numerous ways to customize your very own ice cream cake!
-              First, choose your size. Our 6” cake feeds 8-10 people while our
-              9” cake feeds 16-20 people. You then get to pick from an array of
-              different ice cream flavors, mix-ins, toppings, frostings and even
-              sides so that you can make it truly your own.
-            </span>
-          </p>
-          <p>
-            <span className="bold">CLICK HERE</span> for our ice cream cake
-            order form.
-          </p>
-          <p>
-            Please allow at least 72 hours advance notice for ice cream cakes.
-            For any additional inquiries, please CONTACT US.
-          </p>
-        </TextBlock>
+      <CakeOne>
+        <img src={CakeSvg} />
+      </CakeOne>
+      <Badge>
+        <img src={BadgeSvg} />
+      </Badge>
+      <Cart>
+        <img src={CartSvg} />
+      </Cart>
+      <Heading top="17%" left="10%" color={CHARCOAL} className="first">
+        <span>ICE CREAM CAKES</span>
+      </Heading>
+      <TextBlock top="25%" left="10%" color={CHARCOAL} className="first">
+        <p>
+          <span>
+            We offer numerous ways to customize your very own ice cream cake!
+            First, choose your size. Our 6” cake feeds 8-10 people while our 9”
+            cake feeds 16-20 people. You then get to pick from an array of
+            different ice cream flavors, mix-ins, toppings, frostings and even
+            sides so that you can make it truly your own.
+          </span>
+        </p>
+        <p>
+          <span className="bold">CLICK HERE</span> for our ice cream cake order
+          form.
+        </p>
+        <p>
+          Please allow at least 72 hours advance notice for ice cream cakes. For
+          any additional inquiries, please CONTACT US.
+        </p>
+      </TextBlock>
 
-        <Heading top="60%" left="50%" color={CHARCOAL} className="second">
-          <span>CATERING</span>
-        </Heading>
-        <TextBlock top="68%" left="50%" color={CHARCOAL} className="second">
-          <p>
-            Sweetcream comes to you! We offer catering services for parties and
-            events serving parties of all sizes. CONTACT US for more
-            information.
-          </p>
-        </TextBlock>
-      </Layout>
+      <Heading top="60%" left="50%" color={CHARCOAL} className="second">
+        <span>CATERING</span>
+      </Heading>
+      <TextBlock top="68%" left="50%" color={CHARCOAL} className="second">
+        <p>
+          Sweetcream comes to you! We offer catering services for parties and
+          events serving parties of all sizes. CONTACT US for more information.
+        </p>
+      </TextBlock>
     </EventsWrapper>
   </SceneWrapper>
 );
