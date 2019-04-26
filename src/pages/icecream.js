@@ -155,8 +155,8 @@ const IceCreamWrapper = styled.div`
 `;
 
 const SceneTwo = () => (
-  <IceCreamWrapper>
-    <SceneWrapper backgroundColor={PINK} height="185vh">
+  <SceneWrapper backgroundColor={PINK} height="195vh">
+    <IceCreamWrapper>
       <Chart>
         <img src={ChartSvg} />
       </Chart>
@@ -166,7 +166,7 @@ const SceneTwo = () => (
       <Badge>
         <img src={BadgeSvg} />
       </Badge>
-      <TextBlock className="first" top="15%">
+      <TextBlock className="first" top="200px">
         <p>
           We make ice cream because we love eating it! Our hope is to find the
           most delicious version of each flavor, whether it be an old classic or
@@ -175,7 +175,7 @@ const SceneTwo = () => (
           ingredients responsibly most often leads to the best results.
         </p>
       </TextBlock>
-      <TextBlock className="second" top="25%" width>
+      <TextBlock className="second" top="375px" width>
         <Heading>SIMPLICITY</Heading>
         <p>
           We keep our ingredient list short. We believe that fewer components
@@ -187,7 +187,7 @@ const SceneTwo = () => (
           at home in your kitchen pantry!
         </p>
       </TextBlock>
-      <TextBlock className="third" top="43%">
+      <TextBlock className="third" top="650px">
         <Heading>SOURCING</Heading>
         <p>
           Our goal is to reinvest as much of our sales as possible back into the
@@ -231,8 +231,8 @@ const SceneTwo = () => (
       <Arrow>
         <img src={ArrowSvg} />
       </Arrow>
-    </SceneWrapper>
-  </IceCreamWrapper>
+    </IceCreamWrapper>
+  </SceneWrapper>
 );
 
 export default SceneTwo;
