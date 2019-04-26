@@ -5,6 +5,7 @@ import BadgeSvg from "../images/events_corner.svg";
 import CakeSvg from "../images/cake.svg";
 import CartSvg from "../images/catering_cart.svg";
 import { cartAnimation } from "../helpers/animations";
+import CakeFormPdf from "../assets/cake_order_form.pdf";
 
 const YELLOW = "#faf9e1";
 const ORANGE = "#E5A88C";
@@ -145,8 +146,10 @@ const SceneThree = props => (
           </span>
         </p>
         <p>
-          <span className="bold">CLICK HERE</span> for our ice cream cake order
-          form.
+          <a href={CakeFormPdf} download="cake_order_form.pdf">
+            CLICK HERE
+          </a>{" "}
+          for our ice cream cake order form.
         </p>
         <p>
           Please allow at least 72 hours advance notice for ice cream cakes. For
