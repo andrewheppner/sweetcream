@@ -61,6 +61,7 @@ const MobileWrapper = styled.div`
 
 const Header = styled.div`
   width: 100%;
+  min-width: 850px;
   height: auto;
   position: absolute;
   top: 0:
@@ -78,6 +79,7 @@ const Header = styled.div`
     and (min-device-width: 300px) 
     and (max-device-width: 812px)  { 
     display: none;
+    
   }
 
   .instagram {

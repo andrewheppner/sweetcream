@@ -5,6 +5,7 @@ export const SceneWrapper = styled.div`
   display: flex;
   overflor-y: scroll;
   min-height: 550px;
+  min-width: 980px;
   height: ${props => props.height || "100vh"};
   width: 100vw;
   background: ${props => props.backgroundColor};
@@ -23,6 +24,11 @@ export const SceneWrapper = styled.div`
     color: #f9edd3;
     font-family: "AvertaBold";
     padding-left: 30px;
+  }
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    min-height: none;
+    max-height: none;
   }
 `;
 
