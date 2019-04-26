@@ -155,7 +155,7 @@ const IceCreamWrapper = styled.div`
 `;
 
 const SceneTwo = () => (
-  <SceneWrapper backgroundColor={PINK} height="1500px">
+  <SceneWrapper backgroundColor={PINK} height="1500px" mobileHeight="185vh">
     <IceCreamWrapper>
       <Chart>
         <img src={ChartSvg} />

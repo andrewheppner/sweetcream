@@ -27,8 +27,9 @@ export const SceneWrapper = styled.div`
   }
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    min-height: none;
-    max-height: none;
+    min-width: 100vw;
+    min-height: ${props => props.mobileHeight};
+    height: ${props => props.mobileHeight};
   }
 `;
 

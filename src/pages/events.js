@@ -121,7 +121,7 @@ const EventsWrapper = styled.div`
 `;
 
 const SceneThree = props => (
-  <SceneWrapper backgroundColor={YELLOW} height="1200px">
+  <SceneWrapper backgroundColor={YELLOW} height="1200px" mobileHeight="150vh">
     <EventsWrapper>
       <CakeOne>
         <img src={CakeSvg} />
