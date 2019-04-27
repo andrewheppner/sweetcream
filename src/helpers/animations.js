@@ -35,7 +35,7 @@ export const cartAnimation = () => {
     }
 
     100% {
-      transform: translateX(170px);
+      transform: translateX(120px);
     }
   `;
 };

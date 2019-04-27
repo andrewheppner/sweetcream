@@ -30,7 +30,8 @@ const Shop = styled.div`
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 45%;
-    left: 10%;
+    left: 38%;
+    top: 18%;
   }
 `;
 
@@ -60,7 +61,7 @@ const TextBlock = styled.div`
   width: 40%;
   font-size: 0.9rem;
   font-family: Averta;
-  line-height: 27px;
+  line-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,19 +98,27 @@ const TextBlock = styled.div`
 const FindUsWrapper = styled.div`
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     ${TextBlock}.first {
-      top: 15%;
-      left: 55%;
+      top: 37%;
+      left: 0%;
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      line-height: 15px;
+      align-items: flex-start;
+      font-size: 0.9rem;
     }
     .scoop-heading {
-      left: 10%;
+      left: 32%;
+      top: 13%;
     }
 
     ${TextBlock}.second {
-      top: 50%;
+      top: 55%;
     }
 
     ${TextBlock}.third {
-      top: 50%;
+      top: 55%;
     }
   }
 `;
@@ -120,7 +129,7 @@ const SceneFour = props => (
       <Heading top="15%" left="22%" color={CHARCOAL} className="scoop-heading">
         SCOOP SHOP
       </Heading>
-      <TextBlock top="18%" left="42%" color={CHARCOAL} className="first">
+      <TextBlock top="25%" left="42%" color={CHARCOAL} className="first">
         <p>
           <span>40 Main st.</span>
           <span>Building 13 - Suite 138</span>

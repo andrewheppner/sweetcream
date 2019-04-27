@@ -28,7 +28,7 @@ const Cart = styled.div`
   height: auto;
   position: absolute;
   bottom: 5%;
-  left: 7%;
+  left: 17%;
 
   &:hover {
     animation: ${cartAnimation} 2s steps(5, end) forwards;
@@ -147,12 +147,13 @@ const SceneThree = props => (
             different ice cream flavors, mix-ins, toppings, frostings and even
             sides so that you can make it truly your own.
           </span>
-        </p>
-        <p>
-          <a href={CakeFormPdf} download="cake_order_form.pdf">
-            CLICK HERE
-          </a>{" "}
-          for our ice cream cake order form.
+          <span>
+            <a href={CakeFormPdf} download="cake_order_form.pdf">
+              {" "}
+              CLICK HERE
+            </a>{" "}
+            for our ice cream cake order form.
+          </span>
         </p>
         <p>
           Please allow at least 72 hours advance notice for ice cream cakes. For

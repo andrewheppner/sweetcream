@@ -16,14 +16,17 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'AvertaBold';
     src: url(${AvertaBold});
+    font-display: swap;
   }
   @font-face {
     font-family: 'AvertaSemiBold';
     src: url(${AvertaSemiBold});
+    font-display: swap;
   }
   @font-face {
     font-family: 'Averta';
     src: url(${Averta});
+    font-display: swap;
   }
 `;
 

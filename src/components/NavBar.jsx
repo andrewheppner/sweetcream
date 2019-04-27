@@ -175,7 +175,7 @@ class NavBar extends React.Component {
               FIND US
             </Link>
             <a href="https://www.instagram.com/sweetcreamdairy/" target="blank">
-              <FaInstagram className="instagram" />
+              INSTAGRAM
             </a>
           </Menu>
         </MobileWrapper>
