@@ -27,7 +27,7 @@ const Chart = styled.div`
   height: auto;
   position: absolute;
   top: 200px;
-  right: 10%;
+  right: 85px;
   animation: ${rotationBuilder()} 250s steps(60, start) infinite;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -42,11 +42,12 @@ const Pens = styled.div`
   height: auto;
   position: absolute;
   top: 340px;
-  right: 20%;
+  right: 230px;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    width: 25%;
+    width: 20%;
     top: 27%;
+    right: 18%;
   }
 `;
 
