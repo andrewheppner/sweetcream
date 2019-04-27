@@ -98,7 +98,7 @@ const Header = styled.div`
     text-decoration: none;
     font-family: "AvertaBold";
     color: ${CHARCOAL};
-    
+    transition: color 0.2s ease-in;
   }
 
   a:visited {

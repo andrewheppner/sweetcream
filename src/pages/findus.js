@@ -120,7 +120,7 @@ const SceneFour = props => (
       <Heading top="15%" left="22%" color={CHARCOAL} className="scoop-heading">
         SCOOP SHOP
       </Heading>
-      <TextBlock top="25%" left="42%" color={CHARCOAL} className="first">
+      <TextBlock top="18%" left="42%" color={CHARCOAL} className="first">
         <p>
           <span>40 Main st.</span>
           <span>Building 13 - Suite 138</span>
