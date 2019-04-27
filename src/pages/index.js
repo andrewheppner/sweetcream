@@ -11,7 +11,7 @@ const IceCream = styled.div`
   height: auto;
   width: 15%;
   position: absolute;
-  top: 20%;
+  top: 145px;
   right: 12%;
   z-index: 2;
 
@@ -34,7 +34,7 @@ const BadgeWrapper = styled.div`
   height: auto;
   width: 10%;
   position: absolute;
-  bottom: 2%;
+  bottom: 0%;
   left: 2%;
   z-index: 2;
 
@@ -46,9 +46,9 @@ const BadgeWrapper = styled.div`
 const TextBlock = styled.div`
   position: absolute;
   width: 50%;
-  top: 30%;
+  top: 200px;
   left: 10%;
-  font-size: 1.1vw;
+  font-size: 1.1rem;
   font-family: Averta;
   color: #414042;
   line-height: 30px;

@@ -23,10 +23,10 @@ const Badge = styled.div`
 `;
 
 const Chart = styled.div`
-  width: 20%;
+  width: 300px;
   height: auto;
   position: absolute;
-  top: 15%;
+  top: 200px;
   right: 10%;
   animation: ${rotationBuilder()} 250s steps(60, start) infinite;
 
@@ -38,10 +38,10 @@ const Chart = styled.div`
 `;
 
 const Pens = styled.div`
-  width: 15%;
+  width: 200px;
   height: auto;
   position: absolute;
-  top: 25%;
+  top: 340px;
   right: 20%;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -54,7 +54,7 @@ const Arrow = styled.div`
   width: 3%;
   height: auto;
   position: absolute;
-  top: 35%;
+  top: 500px;
   right: 10%;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -65,11 +65,11 @@ const Arrow = styled.div`
 
 const ChartText = styled.div`
   position: absolute;
-  width: 15%;
+  width: 20%;
   text-align: center;
-  top: 45%;
+  top: 650px;
   right: 10%;
-  font-size: 0.8vw;
+  font-size: 0.8rem;
   font-family: Averta;
   color: #414042;
   line-height: 20px;
@@ -89,7 +89,7 @@ const TextBlock = styled.div`
   width: 50%;
   top: ${props => props.top};
   left: ${props => props.left || "10%"};
-  font-size: 1vw;
+  font-size: 0.9rem;
   font-family: Averta;
   color: #414042;
   line-height: 27px;
@@ -109,7 +109,7 @@ const TextBlock = styled.div`
 
 const Heading = styled.div`
   font-family: AvertaBold;
-  font-size: 3.5vw;
+  font-size: 3.5rem;
   color: ${props => props.color};
   margin: 5% 0;
 
@@ -155,8 +155,8 @@ const IceCreamWrapper = styled.div`
 `;
 
 const SceneTwo = () => (
-  <IceCreamWrapper>
-    <SceneWrapper backgroundColor={PINK} height="185vh">
+  <SceneWrapper backgroundColor={PINK} height="1500px" mobileHeight="185vh">
+    <IceCreamWrapper>
       <Chart>
         <img src={ChartSvg} />
       </Chart>
@@ -231,8 +231,8 @@ const SceneTwo = () => (
       <Arrow>
         <img src={ArrowSvg} />
       </Arrow>
-    </SceneWrapper>
-  </IceCreamWrapper>
+    </IceCreamWrapper>
+  </SceneWrapper>
 );
 
 export default SceneTwo;

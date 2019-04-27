@@ -47,7 +47,7 @@ const Heading = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   font-family: AvertaBold;
-  font-size: 3.5vw;
+  font-size: 3.5rem;
   color: ${props => props.color};
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -58,7 +58,7 @@ const Heading = styled.div`
 const TextBlock = styled.div`
   position: absolute;
   width: 40%;
-  font-size: 1vw;
+  font-size: 0.9rem;
   font-family: Averta;
   line-height: 27px;
   display: flex;
@@ -71,7 +71,7 @@ const TextBlock = styled.div`
 
   .header {
     font-family: AvertaBold;
-    font-size: 3.5vw;
+    font-size: 3.5rem;
     margin-bottom: 5%;
 
     @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -115,12 +115,12 @@ const FindUsWrapper = styled.div`
 `;
 
 const SceneFour = props => (
-  <SceneWrapper backgroundColor={GREEN} height="165vh">
+  <SceneWrapper backgroundColor={GREEN} height="1400px" mobileHeight="165vh">
     <FindUsWrapper>
       <Heading top="15%" left="22%" color={CHARCOAL} className="scoop-heading">
         SCOOP SHOP
       </Heading>
-      <TextBlock top="25%" left="42%" color={CHARCOAL} className="first">
+      <TextBlock top="18%" left="42%" color={CHARCOAL} className="first">
         <p>
           <span>40 Main st.</span>
           <span>Building 13 - Suite 138</span>

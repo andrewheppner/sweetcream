@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const SceneWrapper = styled.div`
   position: relative;
   display: flex;
+  overflor-y: scroll;
+  min-height: 550px;
+  min-width: 980px;
   height: ${props => props.height || "100vh"};
   width: 100vw;
   background: ${props => props.backgroundColor};
@@ -21,6 +24,12 @@ export const SceneWrapper = styled.div`
     color: #f9edd3;
     font-family: "AvertaBold";
     padding-left: 30px;
+  }
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    min-width: 100vw;
+    min-height: ${props => props.mobileHeight};
+    height: ${props => props.mobileHeight};
   }
 `;
 

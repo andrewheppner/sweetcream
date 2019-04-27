@@ -46,7 +46,7 @@ const MobileWrapper = styled.div`
   .bm-menu {
     background: #ffffff;
     padding: 2.5em 1.5em 0;
-    font-size: 1.75em;
+    font-size: 1.75rem;
   }
 
   .bm-item {
@@ -61,6 +61,7 @@ const MobileWrapper = styled.div`
 
 const Header = styled.div`
   width: 100%;
+  min-width: 850px;
   height: auto;
   position: absolute;
   top: 0:
@@ -70,7 +71,7 @@ const Header = styled.div`
   justify-content: space-around;
   align-items: center;
   font-family: "Averta";
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   padding-top: 3%;
   color: ${CHARCOAL};
 
@@ -78,6 +79,7 @@ const Header = styled.div`
     and (min-device-width: 300px) 
     and (max-device-width: 812px)  { 
     display: none;
+    
   }
 
   .instagram {
@@ -96,7 +98,7 @@ const Header = styled.div`
     text-decoration: none;
     font-family: "AvertaBold";
     color: ${CHARCOAL};
-    
+    transition: color 0.2s ease-in;
   }
 
   a:visited {

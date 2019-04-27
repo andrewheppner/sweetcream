@@ -37,6 +37,9 @@ const Cart = styled.div`
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 35%;
     bottom: 20%;
+    &:hover {
+      animation: none;
+    }
   }
 `;
 
@@ -59,7 +62,7 @@ const Heading = styled.div`
   top: ${props => props.top};
   left: ${props => props.left};
   font-family: AvertaBold;
-  font-size: 3.5vw;
+  font-size: 3.5rem;
   color: ${props => props.color};
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -75,7 +78,7 @@ const TextBlock = styled.div`
   width: 40%;
   top: ${props => props.top};
   left: ${props => props.left};
-  font-size: 1vw;
+  font-size: 0.9rem;
   font-family: Averta;
   color: ${props => props.color};
   line-height: 27px;
@@ -121,7 +124,7 @@ const EventsWrapper = styled.div`
 `;
 
 const SceneThree = props => (
-  <SceneWrapper backgroundColor={YELLOW} height="150vh">
+  <SceneWrapper backgroundColor={YELLOW} height="1200px" mobileHeight="150vh">
     <EventsWrapper>
       <CakeOne>
         <img src={CakeSvg} />
