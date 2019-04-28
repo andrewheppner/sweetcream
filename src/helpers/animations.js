@@ -22,20 +22,24 @@ export const cartAnimation = () => {
       transform: translateX(13px);
     }
 
-    30% {
+    20% {
       transform: translateX(24px);
     }
 
+    40% {
+      transform: translateX(10px);
+    }
+
     50% {
-      transform: translateX(79px);
+      transform: translateX(60px);
     }
 
     70% {
-      transform: translateX(115px);
+      transform: translateX(68px);
     }
 
     100% {
-      transform: translateX(120px);
+      transform: translateX(75px);
     }
   `;
 };
