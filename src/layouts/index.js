@@ -29,7 +29,10 @@ const GlobalStyle = createGlobalStyle`
 
 const Layout = ({ children }) => (
   <>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[`Ice Cream`, `Biddeford`, `Maine`, `Portland`, `Sweetcream`]}
+    />
     <NavBar />
     <GlobalStyle />
     {children}

@@ -148,7 +148,11 @@ const SceneThree = props => (
             sides so that you can make it truly your own.
           </span>
           <span>
-            <a href={CakeFormPdf} download="cake_order_form.pdf">
+            <a
+              href={CakeFormPdf}
+              download="cake_order_form.pdf"
+              className="bold"
+            >
               {" "}
               CLICK HERE
             </a>{" "}
@@ -158,7 +162,10 @@ const SceneThree = props => (
         <p>
           Please allow at least 72 hours advance notice for ice cream cakes. For
           any additional inquiries, please{" "}
-          <a href="mailto:info@sweetcreamdairy.com">CONTACT US</a>.
+          <a href="mailto:info@sweetcreamdairy.com" className="bold">
+            CONTACT US
+          </a>
+          .
         </p>
       </TextBlock>
 
@@ -169,8 +176,10 @@ const SceneThree = props => (
         <p>
           Sweetcream comes to you! We offer catering services for parties and
           events serving parties of all sizes.{" "}
-          <a href="mailto:info@sweetcreamdairy.com">CONTACT US</a> for more
-          information.
+          <a href="mailto:info@sweetcreamdairy.com" className="bold">
+            CONTACT US
+          </a>{" "}
+          for more information.
         </p>
       </TextBlock>
     </EventsWrapper>
