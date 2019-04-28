@@ -37,6 +37,7 @@ const Cart = styled.div`
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 35%;
     bottom: 20%;
+    left: 8%;
     &:hover {
       animation: none;
     }
