@@ -135,6 +135,7 @@ const SceneFour = props => (
           <span>Building 13 - Suite 138</span>
           <span>Biddeford, ME</span>
           <span>207-520-2386</span>
+          <span>info@sweetcreamdairy.com</span>
         </p>
         <p>
           <span>Hours</span>
