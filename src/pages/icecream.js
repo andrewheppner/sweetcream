@@ -55,12 +55,13 @@ const Arrow = styled.div`
   width: 3%;
   height: auto;
   position: absolute;
-  top: 500px;
-  right: 10%;
+  top: 525px;
+  right: 150px;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 4%;
     top: 33%;
+    right: 10%;
   }
 `;
 
@@ -69,7 +70,7 @@ const ChartText = styled.div`
   width: 20%;
   text-align: center;
   top: 650px;
-  right: 10%;
+  right: 50px;
   font-size: 0.8rem;
   font-family: Averta;
   color: #414042;
