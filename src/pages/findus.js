@@ -90,6 +90,10 @@ const TextBlock = styled.div`
     font-family: AvertaSemiBold;
   }
 
+  .spaced {
+    line-height: 24px;
+  }
+
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     font-size: 2.7vw;
   }
@@ -153,14 +157,22 @@ const SceneFour = props => (
       </Shop>
       <TextBlock top="65%" left="5%" color={CHARCOAL} className="second">
         <span className="header">PINTS</span>
-        <p>
-          <span>Coming Soon!</span>
+        <p className="spaced">
+          <span>Elements - Biddeford, ME</span>
+          <span>Belleville - Portland, ME</span>
+          <span>Pearl Oyster Bar - Kennebunk, ME</span>
+          <span>And more to come!</span>
         </p>
       </TextBlock>
       <TextBlock top="65%" left="50%" color={CHARCOAL} className="third">
         <span className="header">RESTAURANTS</span>
-        <p>
-          <span>Coming Soon!</span>
+        <p className="spaced">
+          <span>The Cheese Iron - Scarborough, ME</span>
+          <span>The Blue Spoon Cafe - Portland, ME</span>
+          <span>New Morning Natural Foods - Kennebunk, ME</span>
+          <span>The Maine Homestead Market - Lyman, ME</span>
+          <span>Frinklepod Farm - Kennebunk, ME</span>
+          <span>And more to come!</span>
         </p>
       </TextBlock>
       <Seeds>
