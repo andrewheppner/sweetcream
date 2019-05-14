@@ -96,6 +96,10 @@ const TextBlock = styled.div`
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     font-size: 2.7vw;
+
+    .spaced {
+      line-height: 15px;
+    }
   }
 `;
 
@@ -110,7 +114,7 @@ const FindUsWrapper = styled.div`
       justify-content: space-around;
       line-height: 15px;
       align-items: flex-start;
-      font-size: 0.9rem;
+      font-size: 0.7rem;
     }
     .scoop-heading {
       left: 32%;
@@ -119,10 +123,12 @@ const FindUsWrapper = styled.div`
 
     ${TextBlock}.second {
       top: 55%;
+      font-size: 0.6rem;
     }
 
     ${TextBlock}.third {
       top: 55%;
+      font-size: 0.6rem;
     }
   }
 `;
