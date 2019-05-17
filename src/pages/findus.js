@@ -41,6 +41,11 @@ const Seeds = styled.div`
   position: absolute;
   top: 77%;
   left: 35%;
+
+  @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+    top: 90%;
+    left: 20%;
+  }
 `;
 
 const Heading = styled.div`
@@ -123,11 +128,15 @@ const FindUsWrapper = styled.div`
 
     ${TextBlock}.second {
       top: 55%;
+      width: 70%;
+      left: 15%;
       font-size: 0.6rem;
     }
 
     ${TextBlock}.third {
-      top: 55%;
+      top: 70%;
+      width: 70%;
+      left: 15%;
       font-size: 0.6rem;
     }
   }
@@ -149,12 +158,12 @@ const SceneFour = props => (
         </p>
         <p>
           <span>Hours</span>
-          <span>Mon - CL</span>
+          <span>Mon: 12 - 8 PM</span>
           <span>Tue: 12 - 8 PM</span>
           <span>Wed: 12 - 8 PM</span>
           <span>Thu: 12 - 8 PM</span>
-          <span>Fri: 12 - 8 PM</span>
-          <span>Sat: 12 - 8 PM</span>
+          <span>Fri: 12 - 9 PM</span>
+          <span>Sat: 12 - 9 PM</span>
           <span>Sun: 12 - 8 PM</span>
         </p>
       </TextBlock>
