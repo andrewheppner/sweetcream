@@ -173,20 +173,21 @@ const SceneFour = props => (
       <TextBlock top="65%" left="5%" color={CHARCOAL} className="second">
         <span className="header">PINTS</span>
         <p className="spaced">
-          <span>Elements - Biddeford, ME</span>
-          <span>Belleville - Portland, ME</span>
-          <span>Pearl Oyster Bar - Kennebunk, ME</span>
+          <span>The Cheese Iron - Scarborough, ME</span>
+          <span>The Blue Spoon Cafe - Portland, ME</span>
+          <span>New Morning Natural Foods - Kennebunk, ME</span>
+          <span>The Maine Homestead Market - Lyman, ME</span>
+          <span>Frinklepod Farm - Kennebunk, ME</span>
           <span>And more to come!</span>
         </p>
       </TextBlock>
       <TextBlock top="65%" left="50%" color={CHARCOAL} className="third">
         <span className="header">RESTAURANTS</span>
         <p className="spaced">
-          <span>The Cheese Iron - Scarborough, ME</span>
-          <span>The Blue Spoon Cafe - Portland, ME</span>
-          <span>New Morning Natural Foods - Kennebunk, ME</span>
-          <span>The Maine Homestead Market - Lyman, ME</span>
-          <span>Frinklepod Farm - Kennebunk, ME</span>
+          <span>Elements - Biddeford, ME</span>
+          <span>Belleville - Portland, ME</span>
+          <span>Pearl Oyster Bar - Kennebunk, ME</span>
+          <span>Jordan's Farm - Cape Elizabeth, ME</span>
           <span>And more to come!</span>
         </p>
       </TextBlock>
