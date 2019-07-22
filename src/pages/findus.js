@@ -178,6 +178,11 @@ const SceneFour = props => (
           <span>New Morning Natural Foods - Kennebunk, ME</span>
           <span>The Maine Homestead Market - Lyman, ME</span>
           <span>Frinklepod Farm - Kennebunk, ME</span>
+          <span>Jordan's Farm - Cape Elizabeth, ME</span>
+          <span>Harris Farm - Dayton, ME</span>
+          <span>Part and Parcel - Biddeford, ME</span>
+          <span>F.O. Goldthwaite's - Biddeford, ME</span>
+          <span>The Farm Stand - South Portland, ME</span>
           <span>And more to come!</span>
         </p>
       </TextBlock>
@@ -187,7 +192,6 @@ const SceneFour = props => (
           <span>Elements - Biddeford, ME</span>
           <span>Belleville - Portland, ME</span>
           <span>Pearl Oyster Bar - Kennebunk, ME</span>
-          <span>Jordan's Farm - Cape Elizabeth, ME</span>
           <span>And more to come!</span>
         </p>
       </TextBlock>
