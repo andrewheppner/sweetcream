@@ -143,7 +143,7 @@ const FindUsWrapper = styled.div`
 `;
 
 const SceneFour = props => (
-  <SceneWrapper backgroundColor={GREEN} height="1400px" mobileHeight="190vh">
+  <SceneWrapper backgroundColor={GREEN} height="1400px" mobileHeight="225vh">
     <FindUsWrapper>
       <Heading top="15%" left="22%" color={CHARCOAL} className="scoop-heading">
         SCOOP SHOP
