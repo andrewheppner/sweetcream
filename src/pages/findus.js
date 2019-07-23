@@ -134,7 +134,7 @@ const FindUsWrapper = styled.div`
     }
 
     ${TextBlock}.third {
-      top: 85%;
+      top: 65%;
       width: 70%;
       left: 15%;
       font-size: 0.6rem;
