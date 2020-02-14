@@ -158,17 +158,14 @@ const SceneFour = props => (
         </p>
         <p>
           <span>Hours</span>
-          <span>
-            CLOSED FOR THE MONTH OF JANUARY - We apologize for any inconvenience
-            !
-          </span>
+
           {/* <span>Mon: CLOSED</span>
           <span>Tue: 12 - 8 PM</span>
-          <span>Wed: 12 - 8 PM</span>
-          <span>Thu: 12 - 8 PM</span>
+          <span>Wed: 12 - 8 PM</span> */}
+          <span>Thu: 12 - 7 PM</span>
           <span>Fri: 12 - 9 PM</span>
-          <span>Sat: 12 - 9 PM</span>
-          <span>Sun: 12 - 8 PM</span> */}
+          <span>Sat: 9 - 8 PM</span>
+          <span>Sun: 12 - 7 PM</span>
         </p>
       </TextBlock>
       <Shop>
