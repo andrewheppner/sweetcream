@@ -142,6 +142,7 @@ class NavBar extends React.Component {
           />
           <div className="links">
             <Link to="/icecream">ICE CREAM</Link>
+            <Link to="/delivery">DELIVERY</Link>
             <Link to="/events">EVENTS</Link>
             <Link to="/findus">FIND US</Link>
             <a href="https://www.instagram.com/sweetcreamdairy/" target="blank">
@@ -167,6 +168,9 @@ class NavBar extends React.Component {
             </Link>
             <Link onClick={() => this.closeMenu()} to="/icecream">
               ICE CREAM
+            </Link>
+            <Link onClick={() => this.closeMenu()} to="/delivery">
+              DELIVERY
             </Link>
             <Link onClick={() => this.closeMenu()} to="/events">
               EVENTS
