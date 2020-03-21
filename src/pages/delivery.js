@@ -105,12 +105,9 @@ const SceneFive = props => (
       </TextBlock>
       <TextBlock top="70%" left="20%" color={CHARCOAL} className="second">
         <p className="spaced">
-          Please don't hesitate to reach out with any questions to
-          info@sweetcreamdairy.com. You can also call us at 207.520.2386.
-        </p>
-        <p className="spaced">
-          Thank you <b>so much</b> for your kindness and support during this
-          time.
+          We are currently <b>NOT</b> taking orders, but please feel free to
+          reach out to info@sweetcreamdairy.com and we will get back to you as
+          soon as we can.
         </p>
       </TextBlock>
 
