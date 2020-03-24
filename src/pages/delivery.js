@@ -103,13 +103,13 @@ const SceneFive = props => (
         <p>banana brownie</p>
         <p>vegan dark chocolate</p>
       </TextBlock>
-      <TextBlock top="70%" left="20%" color={CHARCOAL} className="second">
+      {/* <TextBlock top="70%" left="20%" color={CHARCOAL} className="second">
         <p className="spaced">
           We are currently <b>NOT</b> taking orders, but please feel free to
           reach out to info@sweetcreamdairy.com and we will get back to you as
           soon as we can.
         </p>
-      </TextBlock>
+      </TextBlock> */}
 
       <Badge>
         <img src={BadgeSvg} />
