@@ -95,7 +95,6 @@ const SceneFive = props => (
         <p>brown butter crunch</p>
         <p>coffee</p>
         <p>milk chocolate</p>
-        <p>samoa swirl</p>
         <p>lucky charms</p>
         <p>peach lassi</p>
         <p>maple bourbon</p>
