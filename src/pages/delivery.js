@@ -20,11 +20,11 @@ const Badge = styled.div`
 
 const Heading = styled.div`
   position: absolute;
-  top: ${props => props.top};
-  left: ${props => props.left};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
   font-family: AvertaBold;
   font-size: 3.5rem;
-  color: ${props => props.color};
+  color: ${(props) => props.color};
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     font-size: 6vw;
@@ -43,9 +43,9 @@ const TextBlock = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  color: ${props => props.color};
-  top: ${props => props.top};
-  left: ${props => props.left};
+  color: ${(props) => props.color};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
 
   .bold {
     font-family: AvertaSemiBold;
@@ -84,13 +84,13 @@ const DeliveryWrapper = styled.div`
   }
 `;
 
-const SceneFive = props => (
+const SceneFive = (props) => (
   <SceneWrapper backgroundColor={WHITE} height="1210px" mobileHeight="100vh">
     <DeliveryWrapper>
       <Heading top="25%" left="20%" color={CHARCOAL} className="scoop-heading">
         Delivery
       </Heading>
-      <TextBlock top="32%" left="20%" color={CHARCOAL}>
+      {/* <TextBlock top="32%" left="20%" color={CHARCOAL}>
         <p>sweet cream</p>
         <p>brown butter crunch</p>
         <p>coffee</p>
@@ -101,14 +101,15 @@ const SceneFive = props => (
         <p>pistachio</p>
         <p>banana brownie</p>
         <p>vegan dark chocolate</p>
-      </TextBlock>
-      {/* <TextBlock top="70%" left="20%" color={CHARCOAL} className="second">
+      </TextBlock> */}
+
+      <TextBlock top="40%" left="20%" color={CHARCOAL} className="second">
         <p className="spaced">
           We are currently <b>NOT</b> taking orders, but please feel free to
           reach out to info@sweetcreamdairy.com and we will get back to you as
           soon as we can.
         </p>
-      </TextBlock> */}
+      </TextBlock>
 
       <Badge>
         <img src={BadgeSvg} />
