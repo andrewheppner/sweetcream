@@ -104,11 +104,13 @@ const SceneFive = (props) => (
       </TextBlock> */}
 
       <TextBlock top="40%" left="20%" color={CHARCOAL} className="second">
-        <p className="spaced">
-          We are currently <b>NOT</b> taking orders, but please feel free to
-          reach out to info@sweetcreamdairy.com and we will get back to you as
-          soon as we can.
-        </p>
+        <a
+          style={{ fontSize: "30px", color: "black", textDecoration: "none" }}
+          href="https://sweetcreamdairy.square.site"
+          target="_blank"
+        >
+          Order Here
+        </a>
       </TextBlock>
 
       <Badge>
