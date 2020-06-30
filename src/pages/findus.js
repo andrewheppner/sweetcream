@@ -50,11 +50,11 @@ const Seeds = styled.div`
 
 const Heading = styled.div`
   position: absolute;
-  top: ${props => props.top};
-  left: ${props => props.left};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
   font-family: AvertaBold;
   font-size: 3.5rem;
-  color: ${props => props.color};
+  color: ${(props) => props.color};
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     font-size: 6vw;
@@ -71,9 +71,9 @@ const TextBlock = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: ${props => props.color};
-  top: ${props => props.top};
-  left: ${props => props.left};
+  color: ${(props) => props.color};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
 
   .header {
     font-family: AvertaBold;
@@ -142,7 +142,7 @@ const FindUsWrapper = styled.div`
   }
 `;
 
-const SceneFour = props => (
+const SceneFour = (props) => (
   <SceneWrapper backgroundColor={GREEN} height="1400px" mobileHeight="225vh">
     <FindUsWrapper>
       <Heading top="15%" left="22%" color={CHARCOAL} className="scoop-heading">
@@ -159,13 +159,13 @@ const SceneFour = props => (
         <p>
           <span>Hours</span>
 
-          {/* <span>Mon: CLOSED</span>
-          <span>Tue: 12 - 8 PM</span>
-          <span>Wed: 12 - 8 PM</span> */}
-          <span>Thu: 12 - 7 PM</span>
-          <span>Fri: 12 - 9 PM</span>
-          <span>Sat: 9 - 8 PM</span>
-          <span>Sun: 12 - 7 PM</span>
+          <span>Mon: CLOSED</span>
+          <span>Tue: 2 - 9 PM</span>
+          <span>Wed: 2 - 9 PM</span>
+          <span>Thu: 2 - 9 PM</span>
+          <span>Fri: 2 - 9 PM</span>
+          <span>Sat: 2 - 9 PM</span>
+          <span>Sun: 2 - 8 PM</span>
         </p>
       </TextBlock>
       <Shop>
@@ -175,7 +175,7 @@ const SceneFour = props => (
         <span className="header">PINTS</span>
         <p className="spaced">
           <span>The Cheese Iron - Scarborough, ME</span>
-          <span>The Blue Spoon Cafe - Portland, ME</span>
+          <span>Crown Jewel - Portland, ME</span>
           <span>New Morning Natural Foods - Kennebunk, ME</span>
           <span>The Maine Homestead Market - Lyman, ME</span>
           <span>Frinklepod Farm - Kennebunk, ME</span>
@@ -183,7 +183,8 @@ const SceneFour = props => (
           <span>Harris Farm - Dayton, ME</span>
           <span>Part and Parcel - Biddeford, ME</span>
           <span>F.O. Goldthwaite's - Biddeford, ME</span>
-          <span>The Farm Stand - South Portland, ME</span>
+          <span>Solo Cucina Market - South Portland, ME</span>
+
           <span>And more to come!</span>
         </p>
       </TextBlock>
@@ -191,7 +192,8 @@ const SceneFour = props => (
         <span className="header">RESTAURANTS</span>
         <p className="spaced">
           <span>Elements - Biddeford, ME</span>
-          <span>Belleville - Portland, ME</span>
+          <span>Crown Jewel - Portland, ME</span>
+          <span>Flood's - Portland, ME</span>
           <span>Pearl Oyster Bar - Kennebunk, ME</span>
           <span>And more to come!</span>
         </p>

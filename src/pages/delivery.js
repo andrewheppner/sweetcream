@@ -66,16 +66,16 @@ const DeliveryWrapper = styled.div`
       top: 20%;
       left: 5%;
       display: flex;
-      width: 100%;
+      width: 80%;
       flex-direction: column;
       justify-content: space-around;
-      line-height: 0px;
+      line-height: 20px;
       align-items: flex-start;
       font-size: 0.7rem;
     }
 
     ${TextBlock}.second {
-      top: 70%;
+      top: 40%;
       left: 5%;
       display: block;
       width: 80%;
@@ -90,18 +90,13 @@ const SceneFive = (props) => (
       <Heading top="25%" left="20%" color={CHARCOAL} className="scoop-heading">
         Delivery
       </Heading>
-      {/* <TextBlock top="32%" left="20%" color={CHARCOAL}>
-        <p>sweet cream</p>
-        <p>brown butter crunch</p>
-        <p>coffee</p>
-        <p>milk chocolate</p>
-        <p>lucky charms</p>
-        <p>peach lassi</p>
-        <p>maple bourbon</p>
-        <p>pistachio</p>
-        <p>banana brownie</p>
-        <p>vegan dark chocolate</p>
-      </TextBlock> */}
+      <TextBlock top="32%" left="20%" color={CHARCOAL}>
+        <p>We're open!</p>
+        <p>
+          Orders can be placed online and picked up at the takeout window when
+          ready.
+        </p>
+      </TextBlock>
 
       <TextBlock top="40%" left="20%" color={CHARCOAL} className="second">
         <a

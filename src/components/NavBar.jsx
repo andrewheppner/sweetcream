@@ -110,7 +110,7 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuOpen: false
+      menuOpen: false,
     };
   }
 
@@ -142,7 +142,7 @@ class NavBar extends React.Component {
           />
           <div className="links">
             <Link to="/icecream">ICE CREAM</Link>
-            <Link to="/delivery">PREORDER</Link>
+            <Link to="/delivery">ORDER ONLINE</Link>
             <Link to="/events">EVENTS</Link>
             <Link to="/findus">FIND US</Link>
             <a href="https://www.instagram.com/sweetcreamdairy/" target="blank">
@@ -160,7 +160,7 @@ class NavBar extends React.Component {
           </div>
           <Menu
             isOpen={this.state.menuOpen}
-            onStateChange={state => this.handleStateChange(state)}
+            onStateChange={(state) => this.handleStateChange(state)}
             customBurgerIcon={<FaBars className="bars" />}
           >
             <Link onClick={() => this.closeMenu()} to="/">
@@ -170,7 +170,7 @@ class NavBar extends React.Component {
               ICE CREAM
             </Link>
             <Link onClick={() => this.closeMenu()} to="/delivery">
-              PREORDER
+              ORDER ONLINE
             </Link>
             <Link onClick={() => this.closeMenu()} to="/events">
               EVENTS
