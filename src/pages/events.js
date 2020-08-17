@@ -60,11 +60,11 @@ const CakeOne = styled.div`
 
 const Heading = styled.div`
   position: absolute;
-  top: ${props => props.top};
-  left: ${props => props.left};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
   font-family: AvertaBold;
   font-size: 3.5rem;
-  color: ${props => props.color};
+  color: ${(props) => props.color};
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     font-size: 6vw;
@@ -77,11 +77,11 @@ const TextBlock = styled.div`
   }
   position: absolute;
   width: 40%;
-  top: ${props => props.top};
-  left: ${props => props.left};
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
   font-size: 0.9rem;
   font-family: Averta;
-  color: ${props => props.color};
+  color: ${(props) => props.color};
   line-height: 27px;
 
   .bold {
@@ -89,7 +89,7 @@ const TextBlock = styled.div`
   }
 
   a {
-    color: ${props => props.color};
+    color: ${(props) => props.color};
     text-decoration: none;
   }
 
@@ -124,7 +124,7 @@ const EventsWrapper = styled.div`
   }
 `;
 
-const SceneThree = props => (
+const SceneThree = (props) => (
   <SceneWrapper backgroundColor={YELLOW} height="1200px" mobileHeight="150vh">
     <EventsWrapper>
       <CakeOne>
@@ -141,14 +141,8 @@ const SceneThree = props => (
       </Heading>
       <TextBlock top="25%" left="10%" color={CHARCOAL} className="first">
         <p>
-          <span>
-            We offer numerous ways to customize your very own ice cream cake!
-            First, choose your size. Our 6” cake feeds 8-10 people while our 9”
-            cake feeds 16-20 people. You then get to pick from an array of
-            different ice cream flavors, mix-ins, toppings, frostings and even
-            sides so that you can make it truly your own.
-          </span>
-          <span>
+          <span>Cakes are subject to availability</span>
+          {/* <span>
             <a
               href={CakeFormPdf}
               download="cake_order_form.pdf"
@@ -158,11 +152,10 @@ const SceneThree = props => (
               CLICK HERE
             </a>{" "}
             for our ice cream cake order form.
-          </span>
+          </span> */}
         </p>
         <p>
-          Please allow at least 72 hours advance notice for ice cream cakes. For
-          any additional inquiries, please{" "}
+          For any cake inquiries, please{" "}
           <a href="mailto:info@sweetcreamdairy.com" className="bold">
             CONTACT US
           </a>
