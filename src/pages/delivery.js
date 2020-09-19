@@ -88,7 +88,7 @@ const SceneFive = (props) => (
   <SceneWrapper backgroundColor={WHITE} height="1210px" mobileHeight="100vh">
     <DeliveryWrapper>
       <Heading top="25%" left="20%" color={CHARCOAL} className="scoop-heading">
-        Delivery
+        Order Online
       </Heading>
       <TextBlock top="32%" left="20%" color={CHARCOAL}>
         <p>We're open!</p>
