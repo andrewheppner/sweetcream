@@ -160,11 +160,11 @@ const SceneFour = (props) => (
           <span>Hours</span>
 
           <span>Mon: CLOSED</span>
-          <span>Tue: 2 - 8 PM</span>
+          <span>Tue: CLOSED</span>
           <span>Wed: 2 - 8 PM</span>
           <span>Thu: 2 - 8 PM</span>
-          <span>Fri: 2 - 9 PM</span>
-          <span>Sat: 2 - 9 PM</span>
+          <span>Fri: 2 - 8 PM</span>
+          <span>Sat: 2 - 8 PM</span>
           <span>Sun: 2 - 8 PM</span>
         </p>
       </TextBlock>
