@@ -159,13 +159,13 @@ const SceneFour = (props) => (
         <p>
           <span>Hours</span>
 
-          <span>CLOSED</span>
-          <span>CLOSED</span>
-          <span>CLOSED</span>
-          <span>CLOSED</span>
-          <span>Fri: 2 - 8 PM</span>
-          <span>Sat: 2 - 8 PM</span>
-          <span>Sun: 12 - 5 PM</span>
+          <span>Mon: CLOSED</span>
+          <span>Tue: CLOSED</span>
+          <span>Wed: CLOSED</span>
+          <span>Thu: CLOSED</span>
+          <span>Fri: CLOSED</span>
+          <span>Sat: CLOSED</span>
+          <span>Sun: CLOSED</span>
         </p>
       </TextBlock>
       <Shop>
