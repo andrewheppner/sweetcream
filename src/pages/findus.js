@@ -121,6 +121,18 @@ const FindUsWrapper = styled.div`
       align-items: flex-start;
       font-size: 0.7rem;
     }
+
+    ${TextBlock}.message {
+      top: 42%;
+      left: 10%;
+      display: flex;
+      width: 80%;
+      flex-direction: column;
+      justify-content: space-around;
+      line-height: 15px;
+      align-items: flex-start;
+      font-size: 0.7rem;
+    }
     .scoop-heading {
       left: 32%;
       top: 13%;
@@ -150,22 +162,17 @@ const SceneFour = (props) => (
       </Heading>
       <TextBlock top="25%" left="42%" color={CHARCOAL} className="first">
         <p>
-          <span>40 Main st.</span>
-          <span>Building 13 - Suite 138</span>
           <span>Biddeford, ME</span>
           <span>207-520-2386</span>
           <span>info@sweetcreamdairy.com</span>
         </p>
+      </TextBlock>
+      <TextBlock top="37%" left="42%" color={CHARCOAL} className="message">
+      <p>
+        Sweetcream Dairy is on the move! Our new shop will be located just up Main St. in Biddeford. We’ve been planning the move for well over two years and are finally building out the new space. 
+        </p>
         <p>
-          <span>Hours</span>
-
-          <span>Mon: CLOSED</span>
-          <span>Tue: CLOSED</span>
-          <span>Wed: CLOSED</span>
-          <span>Thu: CLOSED</span>
-          <span>Fri: CLOSED</span>
-          <span>Sat: CLOSED</span>
-          <span>Sun: CLOSED</span>
+        We have decided to focus our efforts on the new space and will no longer be scooping at our original Pepperell Mill location. Hard to believe we’ve scooped our last cone at the mil but we want to thank everyone who’s supported us for the past 6 year there!
         </p>
       </TextBlock>
       <Shop>
@@ -175,10 +182,11 @@ const SceneFour = (props) => (
         <span className="header">PINTS</span>
         <p className="spaced">
           <span>The Cheese Iron - Scarborough, ME</span>
-          <span>Crown Jewel - Portland, ME</span>
+          <span>Monte's Fine Foods - Portland, ME</span>
+          <span>Frith Farm - Scarborough, ME</span>
           <span>New Morning Natural Foods - Kennebunk, ME</span>
           <span>The Maine Homestead Market - Lyman, ME</span>
-          <span>Frinklepod Farm - Kennebunk, ME</span>
+          <span>Frinklepod Farm - Kennebunk, ME (Seasonal)</span>
           <span>Jordan's Farm - Cape Elizabeth, ME</span>
           <span>Harris Farm - Dayton, ME</span>
           <span>Part and Parcel - Biddeford, ME</span>
@@ -191,11 +199,8 @@ const SceneFour = (props) => (
       <TextBlock top="65%" left="50%" color={CHARCOAL} className="third">
         <span className="header">RESTAURANTS</span>
         <p className="spaced">
-          <span>Elements - Biddeford, ME</span>
-          <span>Crown Jewel - Portland, ME</span>
-          <span>Flood's - Portland, ME</span>
-          <span>Pearl Oyster Bar - Kennebunk, ME</span>
-          <span>And more to come!</span>
+
+          <span>Crown Jewel - Portland, ME (Seasonal)</span>
         </p>
       </TextBlock>
       <Seeds>
