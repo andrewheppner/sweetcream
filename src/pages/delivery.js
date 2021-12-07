@@ -66,7 +66,7 @@ const DeliveryWrapper = styled.div`
       top: 20%;
       left: 5%;
       display: flex;
-      width: 80%;
+      width: 60%;
       flex-direction: column;
       justify-content: space-around;
       line-height: 20px;
@@ -75,7 +75,7 @@ const DeliveryWrapper = styled.div`
     }
 
     ${TextBlock}.second {
-      top: 40%;
+      top: 65%;
       left: 5%;
       display: block;
       width: 80%;
@@ -91,14 +91,17 @@ const SceneFive = (props) => (
         Order Online
       </Heading>
       <TextBlock top="32%" left="20%" color={CHARCOAL}>
-        <p>We're open!</p>
+        <p>Holiday pre-orders start December 10!</p>
         <p>
-          Orders can be placed online and picked up at the takeout window when
-          ready.
+          Those interested in ordering our Roasted Chestnut flavor that was recently featured on <strong>WCSH6 </strong>
+          will be able to place orders using the link below on friday.
+        </p>
+        <p>
+          Orders can be picked up on Friday, Dec 24 between 10AM - 2PM.
         </p>
       </TextBlock>
 
-      <TextBlock top="40%" left="20%" color={CHARCOAL} className="second">
+      <TextBlock top="50%" left="20%" color={CHARCOAL} className="second">
         <a
           style={{ fontSize: "30px", color: "black", textDecoration: "none" }}
           href="https://sweetcreamdairy.square.site"
