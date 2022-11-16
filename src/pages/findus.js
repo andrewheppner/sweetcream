@@ -163,16 +163,15 @@ const SceneFour = (props) => (
       <TextBlock top="25%" left="42%" color={CHARCOAL} className="first">
         <p>
           <span>Biddeford, ME</span>
-          <span>207-520-2386</span>
           <span>info@sweetcreamdairy.com</span>
         </p>
       </TextBlock>
       <TextBlock top="37%" left="42%" color={CHARCOAL} className="message">
-      <p>
-        Sweetcream Dairy is on the move! Our new shop will be located just up Main St. in Biddeford. We’ve been planning the move for well over two years and are finally building out the new space. 
+        <p>
+          Sweetcream Dairy is on the move! Our new shop will be located just up Main St. in Biddeford. We’ve been planning the move for well over two years and are finally building out the new space.
         </p>
         <p>
-        We have decided to focus our efforts on the new space and will no longer be scooping at our original Pepperell Mill location. Hard to believe we’ve scooped our last cone at the mil but we want to thank everyone who’s supported us for the past 6 year there!
+          We have decided to focus our efforts on the new space and will no longer be scooping at our original Pepperell Mill location. Hard to believe we’ve scooped our last cone at the mil but we want to thank everyone who’s supported us for the past 6 year there!
         </p>
       </TextBlock>
       <Shop>

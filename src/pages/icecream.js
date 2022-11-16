@@ -195,10 +195,7 @@ const SceneTwo = () => (
           Our goal is to reinvest as much of our sales as possible back into the
           local economy. We source our ingredients and flavorings directly from
           Maine farms and producers whenever possible. That means direct, hand
-          to hand transactions with the farmers themselves. In 2017,
-          <span className="bold"> 32.4%</span> of our food costs were sourced in
-          this manner. In 2018, <span className="bold">47%</span> of our food
-          costs went to the following farms and producers.
+          to hand transactions with the farmers themselves.
         </p>
         <SourcingList>
           <div className="column">
@@ -219,10 +216,6 @@ const SceneTwo = () => (
             <span>The Farm</span>
           </div>
         </SourcingList>
-        <p>
-          We are committed to doing this assessment every year and reporting the
-          results honestly and openly.
-        </p>
       </TextBlock>
       <ChartText>
         <p>

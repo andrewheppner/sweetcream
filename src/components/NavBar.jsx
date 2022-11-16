@@ -75,11 +75,11 @@ const Header = styled.div`
   padding-top: 3%;
   color: ${CHARCOAL};
 
-  @media only screen 
-    and (min-device-width: 300px) 
-    and (max-device-width: 812px)  { 
+  @media only screen
+    and (min-device-width: 300px)
+    and (max-device-width: 812px)  {
     display: none;
-    
+
   }
 
   .instagram {
@@ -92,7 +92,7 @@ const Header = styled.div`
     display: flex;
     justify-content: space-between;
   }
-  
+
   a {
     cursor: pointer;
     text-decoration: none;
@@ -168,9 +168,6 @@ class NavBar extends React.Component {
             </Link>
             <Link onClick={() => this.closeMenu()} to="/icecream">
               ICE CREAM
-            </Link>
-            <Link onClick={() => this.closeMenu()} to="/delivery">
-              ORDER ONLINE
             </Link>
             <Link onClick={() => this.closeMenu()} to="/events">
               EVENTS
