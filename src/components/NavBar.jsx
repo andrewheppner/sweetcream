@@ -142,7 +142,6 @@ class NavBar extends React.Component {
           />
           <div className="links">
             <Link to="/icecream">ICE CREAM</Link>
-            <Link to="/delivery">ORDER ONLINE</Link>
             <Link to="/events">EVENTS</Link>
             <Link to="/findus">FIND US</Link>
             <a href="https://www.instagram.com/sweetcreamdairy/" target="blank">
