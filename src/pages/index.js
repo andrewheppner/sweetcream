@@ -62,7 +62,7 @@ const TextBlock = styled.div`
     font-size: 5vw;
     top: 35%;
     width: 80%;
-    line-height: 30px;
+    line-height: 23px;
 
     p {
       margin-bottom: 22%;
@@ -87,9 +87,9 @@ const IndexPage = () => (
     </Wave>
     <TextBlock>
       <p>
-        <div className="bold">Handmade in Biddeford!</div>
+        <div className="bold">HANDMADE IN BIDDEFORD</div>
       </p>
-      <p><div>Now scooping at our new location!</div></p>
+      <p><div>Now scooping at our new location</div></p>
 
     </TextBlock>
   </SceneWrapper>
