@@ -5,7 +5,8 @@ import ConeSvg from "../images/cone.svg";
 import BadgeSvg from "../images/landing_corner.svg";
 import WaveSvg from "../images/wave.svg";
 
-const PALE_PINK = "#E4C1C0";
+const PALE_PINK = "#f0cdb6";
+const SWEETGREEN = "#005851";
 
 const IceCream = styled.div`
   height: auto;
@@ -48,27 +49,27 @@ const TextBlock = styled.div`
   width: 50%;
   top: 200px;
   left: 10%;
-  font-size: 1.1rem;
+  font-size: 2.1rem;
   font-family: Averta;
   color: #414042;
-  line-height: 30px;
+  line-height: 65px;
 
   .bold {
     font-family: AvertaSemiBold;
   }
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    font-size: 3vw;
-    top: 20%;
-    width: 60%;
-    line-height: 20px;
+    font-size: 5vw;
+    top: 35%;
+    width: 80%;
+    line-height: 30px;
 
     p {
       margin-bottom: 22%;
     }
 
     .bold {
-      font-size: 4vw;
+      font-size: 6vw;
     }
   }
 `;
@@ -86,18 +87,10 @@ const IndexPage = () => (
     </Wave>
     <TextBlock>
       <p>
-        <span className="bold">SIMPLE </span> We keep our ingredient list short.
-        We believe that fewer components translates to better, brighter, and
-        more genuine flavor.
+        <div className="bold">Handmade in Biddeford!</div>
       </p>
-      <p>
-        <span className="bold">NATURAL</span> We do not use corn syrup,
-        artificial flavorings, gums, or emulsifiers.
-      </p>
-      <p>
-        <span className="bold">LOCAL</span> We source our ingredients and
-        flavorings directly from Maine farms whenever possible.
-      </p>
+      <p><div>Now scooping at our new location!</div></p>
+
     </TextBlock>
   </SceneWrapper>
 );

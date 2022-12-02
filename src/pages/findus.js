@@ -43,7 +43,7 @@ const Seeds = styled.div`
   left: 35%;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
-    top: 90%;
+    top: 80%;
     left: 20%;
   }
 `;
@@ -111,7 +111,7 @@ const TextBlock = styled.div`
 const FindUsWrapper = styled.div`
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     ${TextBlock}.first {
-      top: 37%;
+      top: 27%;
       left: 0%;
       display: flex;
       width: 100%;
@@ -123,13 +123,13 @@ const FindUsWrapper = styled.div`
     }
 
     ${TextBlock}.message {
-      top: 42%;
-      left: 10%;
+      top: 32%;
+      left: 40%;
       display: flex;
       width: 80%;
       flex-direction: column;
       justify-content: space-around;
-      line-height: 15px;
+      line-height: 20px;
       align-items: flex-start;
       font-size: 0.7rem;
     }
@@ -162,17 +162,22 @@ const SceneFour = (props) => (
       </Heading>
       <TextBlock top="25%" left="42%" color={CHARCOAL} className="first">
         <p>
-          <span>Biddeford, ME</span>
+          <span>128 Main St Unit 101</span>
+          <span>Biddeford, ME 04005</span>
           <span>info@sweetcreamdairy.com</span>
         </p>
       </TextBlock>
       <TextBlock top="37%" left="42%" color={CHARCOAL} className="message">
         <p>
-          Sweetcream Dairy is on the move! Our new shop will be located just up Main St. in Biddeford. We’ve been planning the move for well over two years and are finally building out the new space.
+          <span>Mon: Closed</span>
+          <span>Tue: Closed</span>
+          <span>Wed: 11am - 7pm</span>
+          <span>Thu: 11am - 7pm</span>
+          <span>Fri: 11am - 8pm</span>
+          <span>Sat: 11am - 8pm</span>
+          <span>Sun: 11am - 7pm</span>
         </p>
-        <p>
-          We have decided to focus our efforts on the new space and will no longer be scooping at our original Pepperell Mill location. Hard to believe we’ve scooped our last cone at the mil but we want to thank everyone who’s supported us for the past 6 year there!
-        </p>
+
       </TextBlock>
       <Shop>
         <img src={ShopSvg} />
@@ -193,13 +198,6 @@ const SceneFour = (props) => (
           <span>Solo Cucina Market - South Portland, ME</span>
 
           <span>And more to come!</span>
-        </p>
-      </TextBlock>
-      <TextBlock top="65%" left="50%" color={CHARCOAL} className="third">
-        <span className="header">RESTAURANTS</span>
-        <p className="spaced">
-
-          <span>Crown Jewel - Portland, ME (Seasonal)</span>
         </p>
       </TextBlock>
       <Seeds>

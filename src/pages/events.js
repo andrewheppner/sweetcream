@@ -15,7 +15,7 @@ const Badge = styled.div`
   width: 15%;
   height: auto;
   position: absolute;
-  bottom: 0%;
+  top: 55%;
   right: 0%;
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -36,7 +36,7 @@ const Cart = styled.div`
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 35%;
-    bottom: 20%;
+    bottom: 50%;
     left: 8%;
     &:hover {
       animation: none;
@@ -107,7 +107,7 @@ const EventsWrapper = styled.div`
       left: 7%;
     }
     ${TextBlock}.second {
-      top: 70%;
+      top: 40%;
       width: 45%;
       left: 50%;
     }
@@ -118,7 +118,7 @@ const EventsWrapper = styled.div`
     }
 
     ${Heading}.second {
-      top: 65%;
+      top: 35%;
       left: 50%;
     }
   }
