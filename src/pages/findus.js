@@ -29,7 +29,7 @@ const Shop = styled.div`
   left: 18%;
 
   .shop-photo {
-    width: 600px;
+    width: 30vw;
   }
 
 
@@ -170,14 +170,14 @@ const SceneFour = (props) => (
       <Heading top="15%" left="22%" color={CHARCOAL} className="scoop-heading">
         SCOOP SHOP
       </Heading>
-      <TextBlock top="25%" left="42%" color={CHARCOAL} className="first">
+      <TextBlock top="25%" left="47%" color={CHARCOAL} className="first">
         <p>
           <span>128 Main St Unit 101</span>
           <span>Biddeford, ME 04005</span>
           <span>info@sweetcreamdairy.com</span>
         </p>
       </TextBlock>
-      <TextBlock top="37%" left="42%" color={CHARCOAL} className="message">
+      <TextBlock top="37%" left="47%" color={CHARCOAL} className="message">
         <p>
           <span>Mon: Closed</span>
           <span>Tue: Closed</span>

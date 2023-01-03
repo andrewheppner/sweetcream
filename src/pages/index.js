@@ -56,7 +56,7 @@ const TextBlock = styled.div`
 
   .bold {
     font-family: AvertaSemiBold;
-    line-height: 10px;
+    line-height: 20px;
   }
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -71,7 +71,7 @@ const TextBlock = styled.div`
 
     .bold {
       font-size: 6vw;
-      line-height: 30px;
+      line-height: 35px;
     }
   }
 `;
