@@ -56,6 +56,7 @@ const TextBlock = styled.div`
 
   .bold {
     font-family: AvertaSemiBold;
+    line-height: 10px;
   }
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
@@ -70,6 +71,7 @@ const TextBlock = styled.div`
 
     .bold {
       font-size: 6vw;
+      line-height: 30px;
     }
   }
 `;
@@ -88,9 +90,8 @@ const IndexPage = () => (
     <TextBlock>
       <p>
         <div className="bold">HANDMADE IN BIDDEFORD</div>
+        <div>Now scooping at our new location</div>
       </p>
-      <p><div>Now scooping at our new location</div></p>
-
     </TextBlock>
   </SceneWrapper>
 );

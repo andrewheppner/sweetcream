@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { SceneWrapper } from "../components/styledElements";
-import ShopSvg from "../images/shop.svg";
+import ShopPng from "../images/shop.png";
 import SeedsSvg from "../images/seeds.svg";
 import BadgeSvg from "../images/findus_corner.svg";
 
@@ -25,14 +25,24 @@ const Shop = styled.div`
   width: 30%;
   height: auto;
   position: absolute;
-  top: 20%;
-  left: 22%;
+  top: 25%;
+  left: 18%;
+
+  .shop-photo {
+    width: 600px;
+  }
+
 
   @media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
     width: 45%;
-    left: 38%;
-    top: 18%;
+    left: 19%;
+    top: 16%;
+
+    .shop-photo {
+      width: 250px;
+    }
   }
+
 `;
 
 const Seeds = styled.div`
@@ -180,7 +190,7 @@ const SceneFour = (props) => (
 
       </TextBlock>
       <Shop>
-        <img src={ShopSvg} />
+        <img className="shop-photo" src={ShopPng} />
       </Shop>
       <TextBlock top="65%" left="5%" color={CHARCOAL} className="second">
         <span className="header">PINTS</span>
