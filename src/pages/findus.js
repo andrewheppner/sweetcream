@@ -183,8 +183,8 @@ const SceneFour = (props) => (
           <span>Tue: CLOSED</span>
           <span>Wed: 1pm - 8pm</span>
           <span>Thu: 1pm - 8pm</span>
-          <span>Fri: 1pm - 9pm</span>
-          <span>Sat: 1pm - 9pm</span>
+          <span>Fri: 1pm - 8pm</span>
+          <span>Sat: 1pm - 8pm</span>
           <span>Sun: 1pm - 8pm</span>
         </p>
 
