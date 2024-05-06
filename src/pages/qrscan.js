@@ -147,6 +147,7 @@ const SceneSix = (props) => (
           </Column>
           <Column>
             <SubHeadingText>Consumption</SubHeadingText>
+            <ChunkHeading></ChunkHeading>
             <ColumnTextBlock>Do NOT microwave your ice cream. Just don't do it.</ColumnTextBlock>
             <ColumnTextBlock>Ice cream is best stored below 0F, but should be served at 6-10F. To temper the ice cream, leave the pint in the refrigerator rather than on the kitchen counter.</ColumnTextBlock>
             <ColumnTextBlock>Minimize the time the ice cream is out of the freezer.</ColumnTextBlock>
