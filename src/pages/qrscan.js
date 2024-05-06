@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { SceneWrapper } from "../components/styledElements";
 
-const GREEN = "#34624D";
+const GREEN = "#d0e8cc";
 const WHITE = "#FFFFFF";
 const CHARCOAL = "#414042";
 
@@ -18,7 +18,7 @@ const PageWrapper = styled.div`
     width: 90%;
     padding: 1.5rem;
   }
-  color: #fff;
+  color: #414042;
   font-family: Averta;
   padding: 4rem;
 `;
@@ -82,7 +82,6 @@ const ColumnTextBlock = styled.div`
     font-size: 0.33rem;
     font-weight: 100;
   }
-  text-align: justify;
   line-height: 0.5rem;
   margin-top: ${(props) => props.mt};
   margin-bottom: ${(props) => props.mb};
@@ -141,22 +140,16 @@ const SceneSix = (props) => (
             <SubHeadingText>Storage</SubHeadingText>
             <ChunkHeading>KEEP IT COLD</ChunkHeading>
             <ColumnTextBlock>Keep your freezer as cold as possible. Most home freezers don't get much colder than 0F, but with poper care your ice cream can last upwards of 8 weeks at this temp!</ColumnTextBlock>
-            <ChunkHeading> - - </ChunkHeading>
             <ColumnTextBlock>Temperatures are most stable in the lower and rear sections of your freezer. Keep your pints there as temperatures are less likely to dip into the dreaded "danger zone".</ColumnTextBlock>
-            <ChunkHeading> - - </ChunkHeading>
             <ColumnTextBlock>Do not store ice cream in the freezer door. Temperatures fluctuate greatly as the door is open and shut.</ColumnTextBlock>
             <ChunkHeading>Freezer Burn</ChunkHeading>
             <ColumnTextBlock>Freezer burn is caused by air coming into contact with the surface of your ice cream. When scooping from your pint, try to keep the top portion flat. Press a piece of parchment or wax paper (you can reuse the one that came with the pint!) onto the surface to minimize the ice cream's exposure to air. Threat neutralized.</ColumnTextBlock>
           </Column>
           <Column>
             <SubHeadingText>Consumption</SubHeadingText>
-            <ChunkHeading> - - </ChunkHeading>
             <ColumnTextBlock>Do NOT microwave your ice cream. Just don't do it.</ColumnTextBlock>
-            <ChunkHeading> - - </ChunkHeading>
             <ColumnTextBlock>Ice cream is best stored below 0F, but should be served at 6-10F. To temper the ice cream, leave the pint in the refrigerator rather than on the kitchen counter.</ColumnTextBlock>
-            <ChunkHeading> - - </ChunkHeading>
             <ColumnTextBlock>Minimize the time the ice cream is out of the freezer.</ColumnTextBlock>
-            <ChunkHeading> - - </ChunkHeading>
             <ColumnTextBlock>Eat the entire pint at once! No need to worry about storage temperatures, tempering or defrost cycles if you finish it all in one sitting :)</ColumnTextBlock>
           </Column>
         </Columns>
