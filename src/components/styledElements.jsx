@@ -50,7 +50,7 @@ export const InfoBlock = styled.div`
   height: 30vh;
   font-family: 'Averta';
   font-size: 3em;
-  
+
   .intense {
     font-family: 'AvertaBold'
     font-size: 4em;
