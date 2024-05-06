@@ -72,9 +72,6 @@ const BoldyJ = styled.span`
   font-family: AvertaBold;
 `;
 
-const GoldenText = styled.span`
-  color: #FFD700;
-`;
 
 const ColumnTextBlock = styled.div`
   font-size: 1rem;
@@ -113,7 +110,7 @@ const SceneSix = (props) => (
         <TextBlock align='center' mb='50px'>While we're here, we thought we'd take this opportunity to teach you how best to take care of your newly purchased pint. See below for some science and some tips!</TextBlock>
         <HeadingText align='left'>KEEP IT COLD</HeadingText>
         <TextBlock align='left' mb='2rem'>
-          <GoldenText>The golden rule: </GoldenText>
+          <BoldyJ>The golden rule: </BoldyJ>
           <BoldyJ>Always keep this pint as cold as possible.</BoldyJ>
           <span>This is the most important point to remember. Every bit of advice below is essentially a way of keeping the temperature of your pint as consistently cold as possible.</span>
         </TextBlock>
@@ -139,19 +136,19 @@ const SceneSix = (props) => (
           <Column>
             <SubHeadingText>Storage</SubHeadingText>
             <ChunkHeading>KEEP IT COLD</ChunkHeading>
-            <ColumnTextBlock>Keep your freezer as cold as possible. Most home freezers don't get much colder than 0F, but with poper care your ice cream can last upwards of 8 weeks at this temp!</ColumnTextBlock>
-            <ColumnTextBlock>Temperatures are most stable in the lower and rear sections of your freezer. Keep your pints there as temperatures are less likely to dip into the dreaded "danger zone".</ColumnTextBlock>
-            <ColumnTextBlock>Do not store ice cream in the freezer door. Temperatures fluctuate greatly as the door is open and shut.</ColumnTextBlock>
+            <ColumnTextBlock mb="0.6rem">Keep your freezer as cold as possible. Most home freezers don't get much colder than 0F, but with poper care your ice cream can last upwards of 8 weeks at this temp!</ColumnTextBlock>
+            <ColumnTextBlock mb="0.6rem">Temperatures are most stable in the lower and rear sections of your freezer. Keep your pints there as temperatures are less likely to dip into the dreaded "danger zone".</ColumnTextBlock>
+            <ColumnTextBlock mb="0.6rem">Do not store ice cream in the freezer door. Temperatures fluctuate greatly as the door is open and shut.</ColumnTextBlock>
             <ChunkHeading>Freezer Burn</ChunkHeading>
             <ColumnTextBlock>Freezer burn is caused by air coming into contact with the surface of your ice cream. When scooping from your pint, try to keep the top portion flat. Press a piece of parchment or wax paper (you can reuse the one that came with the pint!) onto the surface to minimize the ice cream's exposure to air. Threat neutralized.</ColumnTextBlock>
           </Column>
           <Column>
             <SubHeadingText>Consumption</SubHeadingText>
             <ChunkHeading>Eat!</ChunkHeading>
-            <ColumnTextBlock>Do NOT microwave your ice cream. Just don't do it.</ColumnTextBlock>
-            <ColumnTextBlock>Ice cream is best stored below 0F, but should be served at 6-10F. To temper the ice cream, leave the pint in the refrigerator rather than on the kitchen counter.</ColumnTextBlock>
-            <ColumnTextBlock>Minimize the time the ice cream is out of the freezer.</ColumnTextBlock>
-            <ColumnTextBlock>Eat the entire pint at once! No need to worry about storage temperatures, tempering or defrost cycles if you finish it all in one sitting :)</ColumnTextBlock>
+            <ColumnTextBlock mb="0.6rem">Do NOT microwave your ice cream. Just don't do it.</ColumnTextBlock>
+            <ColumnTextBlock mb="0.6rem">Ice cream is best stored below 0F, but should be served at 6-10F. To temper the ice cream, leave the pint in the refrigerator rather than on the kitchen counter.</ColumnTextBlock>
+            <ColumnTextBlock mb="0.6rem">Minimize the time the ice cream is out of the freezer.</ColumnTextBlock>
+            <ColumnTextBlock mb="0.6rem">Eat the entire pint at once! No need to worry about storage temperatures, tempering or defrost cycles if you finish it all in one sitting :)</ColumnTextBlock>
           </Column>
         </Columns>
       </PageWrapper>
