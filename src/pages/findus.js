@@ -177,7 +177,7 @@ const SceneFour = (props) => (
           <span>info@sweetcreamdairy.com</span>
         </p>
       </TextBlock>
-      <TextBlock top="37%" left="47%" color={CHARCOAL} className="message">
+      <TextBlock top="37%" left="17%" color={CHARCOAL} className="message">
         <p>
           <span>CLOSED FOR WINTER BREAK. Opening back up in February! </span>
         </p>
