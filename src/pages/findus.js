@@ -134,7 +134,7 @@ const FindUsWrapper = styled.div`
 
     ${TextBlock}.message {
       top: 32%;
-      left: 15%;
+      left: 40%;
       display: flex;
       width: 80%;
       flex-direction: column;
@@ -177,9 +177,15 @@ const SceneFour = (props) => (
           <span>info@sweetcreamdairy.com</span>
         </p>
       </TextBlock>
-      <TextBlock top="37%" left="17%" color={CHARCOAL} className="message ">
+      <TextBlock top="37%" left="47%" color={CHARCOAL} className="message">
         <p>
-          <span>CLOSED FOR WINTER BREAK. Opening back up in February! </span>
+          <span>Mon: CLOSED</span>
+          <span>Tue: CLOSED</span>
+          <span>Wed: CLOSED</span>
+          <span>Thu: CLOSED</span>
+          <span>Fri: 1pm - 8pm</span>
+          <span>Sat: 1pm - 8pm</span>
+          <span>Sun: 1pm - 7pm</span>
         </p>
 
       </TextBlock>
