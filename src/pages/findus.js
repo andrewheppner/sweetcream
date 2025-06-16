@@ -179,13 +179,13 @@ const SceneFour = (props) => (
       </TextBlock>
       <TextBlock top="37%" left="47%" color={CHARCOAL} className="message">
         <p>
-          <span>Mon: CLOSED</span>
-          <span>Tue: CLOSED</span>
-          <span>Wed: CLOSED</span>
-          <span>Thu: CLOSED</span>
-          <span>Fri: 1pm - 8pm</span>
-          <span>Sat: 1pm - 8pm</span>
-          <span>Sun: 1pm - 7pm</span>
+          <span>Mon: 1pm - 9pm</span>
+          <span>Tue: 1pm - 9pm</span>
+          <span>Wed: 1pm - 9pm</span>
+          <span>Thu: 1pm - 9pm</span>
+          <span>Fri: 1pm - 9pm</span>
+          <span>Sat: 1pm - 9pm</span>
+          <span>Sun: 1pm - 9pm</span>
         </p>
 
       </TextBlock>
